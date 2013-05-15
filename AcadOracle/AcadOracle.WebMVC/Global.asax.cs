@@ -32,7 +32,6 @@ namespace AcadOracle.WebMVC
         private void InitDependencyInjection()
         {
             Container container = new Container();
-            container.Register<IUserRepository, UserRepository>();
         }
     }
 }

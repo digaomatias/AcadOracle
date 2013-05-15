@@ -8,16 +8,21 @@ namespace AcadOracle.WebMVC.Infrastructure
 {
     public class SimpleInjectorControllerFactory : DefaultControllerFactory
     {
-        private readonly ISimpleInjectorContainer
+        private readonly SimpleInjector.Container container; 
 
-        public SimpleInjectorControllerFactory(IControllerFactory factory)
+        public SimpleInjectorControllerFactory(SimpleInjector.Container container)
         {
-            
-        }
-
+            this.container = container;
+        }   
+        
         protected override IController GetControllerInstance(System.Web.Routing.RequestContext requestContext, Type controllerType)
-{
- 	 return base.GetControllerInstance(requestContext, controllerType);
-}
+        {
+            if (controllerType != null)
+            {
+                return container.GetInstance(controllerType) as IController;
+            }
+
+ 	         return base.GetControllerInstance(requestContext, controllerType);
+        }
     }
 }

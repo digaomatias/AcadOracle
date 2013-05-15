@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcadOracle.Dal", "AcadOracl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcadOracle.Common", "AcadOracle.Common\AcadOracle.Common.csproj", "{F1AF0396-4B92-4F38-B328-12D1C86CE07C}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "AcadOracle.DB", "AcadOracle.DB\AcadOracle.DB.sqlproj", "{BB3AD2EE-1041-4B17-9BBA-CEB137ADFA73}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,12 @@ Global
 		{F1AF0396-4B92-4F38-B328-12D1C86CE07C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1AF0396-4B92-4F38-B328-12D1C86CE07C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1AF0396-4B92-4F38-B328-12D1C86CE07C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB3AD2EE-1041-4B17-9BBA-CEB137ADFA73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB3AD2EE-1041-4B17-9BBA-CEB137ADFA73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB3AD2EE-1041-4B17-9BBA-CEB137ADFA73}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{BB3AD2EE-1041-4B17-9BBA-CEB137ADFA73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB3AD2EE-1041-4B17-9BBA-CEB137ADFA73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB3AD2EE-1041-4B17-9BBA-CEB137ADFA73}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
