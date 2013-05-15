@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="9a4fe72afe6d41f7b1b6ec36820d298e" Name="Diagram1" ZoomLevel="64">
+      <Diagram DiagramId="9a4fe72afe6d41f7b1b6ec36820d298e" Name="Diagram1" ZoomLevel="109">
         <EntityTypeShape EntityType="AcadOracleDBModel.Curso" Width="1.5" PointX="10.485092516283082" PointY="9.1997958911581872" />
         <EntityTypeShape EntityType="AcadOracleDBModel.Disciplina" Width="1.5" PointX="8.72165966998863" PointY="29.727394192352609" />
         <EntityTypeShape EntityType="AcadOracleDBModel.Horario" Width="1.5" PointX="15.25" PointY="16.75" />

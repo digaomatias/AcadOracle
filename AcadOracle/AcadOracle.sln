@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcadOracle.Common", "AcadOr
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "AcadOracle.DB", "AcadOracle.DB\AcadOracle.DB.sqlproj", "{BB3AD2EE-1041-4B17-9BBA-CEB137ADFA73}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcadOracle.UnitTests", "AcadOracle.UnitTests\AcadOracle.UnitTests.csproj", "{C40F1676-562D-4817-83B4-4275ACD9E70C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{BB3AD2EE-1041-4B17-9BBA-CEB137ADFA73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB3AD2EE-1041-4B17-9BBA-CEB137ADFA73}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BB3AD2EE-1041-4B17-9BBA-CEB137ADFA73}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{C40F1676-562D-4817-83B4-4275ACD9E70C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C40F1676-562D-4817-83B4-4275ACD9E70C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C40F1676-562D-4817-83B4-4275ACD9E70C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C40F1676-562D-4817-83B4-4275ACD9E70C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

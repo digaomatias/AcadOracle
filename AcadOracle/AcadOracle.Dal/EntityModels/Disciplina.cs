@@ -21,11 +21,11 @@ namespace AcadOracle.Dal.EntityModels
         }
     
         public int Id { get; set; }
-        public string Name { get; set; }
-        public int Credits { get; set; }
-        public int PreCredits { get; set; }
-        public short Semester { get; set; }
-        public bool IsElective { get; set; }
+        public string Nome { get; set; }
+        public int Creditos { get; set; }
+        public int PreCreditos { get; set; }
+        public short Semestre { get; set; }
+        public bool Eletiva { get; set; }
     
         public virtual ICollection<Turma> Turma { get; set; }
         public virtual ICollection<Curso> Curso { get; set; }
