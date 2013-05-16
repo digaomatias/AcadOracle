@@ -60,6 +60,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AcadOracle.Common\AcadOracle.Common.csproj">
+      <Project>{f1af0396-4b92-4f38-b328-12d1c86ce07c}</Project>
+      <Name>AcadOracle.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AcadOracle.Core\AcadOracle.Core.csproj">
       <Project>{52dddfef-50d0-4cfe-8762-51a73f27aa2c}</Project>
       <Name>AcadOracle.Core</Name>

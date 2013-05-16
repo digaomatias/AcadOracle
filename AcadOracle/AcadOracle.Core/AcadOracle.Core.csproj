@@ -40,7 +40,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interfaces\IUser.cs" />
-    <Compile Include="Models\Discipline.cs" />
+    <Compile Include="Models\Disciplina.cs" />
+    <Compile Include="Models\Horario.cs" />
+    <Compile Include="Models\Turma.cs" />
     <Compile Include="ViewModels\UserEditModel.cs" />
     <Compile Include="ViewModels\UserViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

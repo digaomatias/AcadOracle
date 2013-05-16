@@ -89,6 +89,7 @@
     <Compile Include="Interfaces\IDisciplineRepository.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Interfaces\IRepositoryContext.cs" />
+    <Compile Include="Interfaces\ITurmaRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
