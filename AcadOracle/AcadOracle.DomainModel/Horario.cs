@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace AcadOracle.Core.Models
+namespace AcadOracle.DomainModel
 {
     public class Horario
     {

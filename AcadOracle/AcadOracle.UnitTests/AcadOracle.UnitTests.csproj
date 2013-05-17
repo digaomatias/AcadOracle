@@ -38,6 +38,9 @@
     <Reference Include="Moq">
       <HintPath>..\packages\Moq.4.0.10827\lib\NET40\Moq.dll</HintPath>
     </Reference>
+    <Reference Include="SimpleInjector">
+      <HintPath>..\packages\SimpleInjector.2.2.3\lib\net40-client\SimpleInjector.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -71,6 +74,10 @@
     <ProjectReference Include="..\AcadOracle.Dal\AcadOracle.Dal.csproj">
       <Project>{44ce2d41-4409-4c61-9af3-abc52daf0403}</Project>
       <Name>AcadOracle.Dal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AcadOracle.DomainModel\AcadOracle.DomainModel.csproj">
+      <Project>{60585025-b29e-4b62-93f1-909aecd18cb2}</Project>
+      <Name>AcadOracle.DomainModel</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

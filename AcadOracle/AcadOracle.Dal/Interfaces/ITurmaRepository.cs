@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AcadOracle.Dal.EntityModels;
+﻿using System.Collections.Generic;
 
 namespace AcadOracle.Dal.Interfaces
 {
-    public interface ITurmaRepository : IRepository<Turma>
+    public interface ITurmaRepository : IRepository<DomainModel.Turma>
     {
+        IEnumerable<DomainModel.Turma> GetByDisciplina(IEnumerable<DomainModel.Disciplina> disciplinas);
     }
 }

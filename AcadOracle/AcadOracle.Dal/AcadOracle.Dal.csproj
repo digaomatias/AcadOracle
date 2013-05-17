@@ -92,7 +92,16 @@
     <Compile Include="Interfaces\ITurmaRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\AcadOracle.Common\AcadOracle.Common.csproj">
+      <Project>{f1af0396-4b92-4f38-b328-12d1c86ce07c}</Project>
+      <Name>AcadOracle.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AcadOracle.DomainModel\AcadOracle.DomainModel.csproj">
+      <Project>{60585025-b29e-4b62-93f1-909aecd18cb2}</Project>
+      <Name>AcadOracle.DomainModel</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="EntityModels\OracleDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
