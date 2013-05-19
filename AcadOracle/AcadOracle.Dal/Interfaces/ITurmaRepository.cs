@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
+using AcadOracle.DomainModel.Models;
 
 namespace AcadOracle.Dal.Interfaces
 {
-    public interface ITurmaRepository : IRepository<DomainModel.Turma>
+    public interface ITurmaRepository : IRepository<Turma>
     {
-        IEnumerable<DomainModel.Turma> GetByDisciplina(IEnumerable<DomainModel.Disciplina> disciplinas);
+        IEnumerable<Turma> GetByDisciplina(IEnumerable<Disciplina> disciplinas);
     }
 }

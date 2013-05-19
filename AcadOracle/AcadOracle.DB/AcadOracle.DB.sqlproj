@@ -69,8 +69,13 @@
     <Build Include="Tables\TurmaHorario.sql" />
     <Build Include="Tables\CursoDisciplina.sql" />
     <Build Include="Tables\Horario.sql" />
+    <Build Include="Tables\DisciplinasPreRequisitos.sql" />
+    <Build Include="Tables\HoraAula.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="AcadOracle.DB.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\PostDeploymentScript.sql" />
   </ItemGroup>
 </Project>

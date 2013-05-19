@@ -4,24 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AcadOracle.DomainModel;
+using AcadOracle.DomainModel.Models;
 using AcadOracle.DomainModel.Restricao;
 
 namespace AcadOracle.DomainModel
 {
     public static class ModelExtensions
     {
-        internal static bool HorariosSobrepostos(this IEnumerable<Horario> self, IEnumerable<Horario> horarios)
+        internal static bool TurmaHorariosSobrepostos(this IEnumerable<TurmaHorario> self, IEnumerable<TurmaHorario> TurmaHorarios)
         {
-            var result = self.FirstOrDefault(h => horarios.Any(h1 => h1.SobrepoeHorario(h)));
+            var result = self.FirstOrDefault(h => TurmaHorarios.Any(h1 => h1.SobrepoeTurmaHorario(h)));
             return result != null;
         }
 
-        internal static IEnumerable<Turma> RemoverTurmasEmHorariosRestritos(this IEnumerable<Turma> self, IEnumerable<Horario> restricoes)
+        internal static IEnumerable<Turma> RemoverTurmasEmTurmaHorariosRestritos(this IEnumerable<Turma> self, IEnumerable<TurmaHorario> restricoes)
         {
             if (restricoes == null)
                 return self;
 
-            return self.Where(t => !t.Horarios.HorariosSobrepostos(restricoes)).ToArray();
+            return self.Where(t => !t.TurmaHorarios.TurmaHorariosSobrepostos(restricoes)).ToArray();
         }
 
         public static IEnumerable<Turma> AplicarRestricoes(this IEnumerable<Turma> self,

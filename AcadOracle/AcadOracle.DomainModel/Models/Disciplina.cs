@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+using System;
 using System.Linq;
+using System.Collections.Generic;
 
-namespace AcadOracle.DomainModel
+namespace AcadOracle.DomainModel.Models
 {
-    public class Disciplina
+    public partial class Disciplina
     {
         //ToDo: Move this to a settings file or the database.
         private const int MaxSemestres = 11;
@@ -15,20 +15,22 @@ namespace AcadOracle.DomainModel
 
         public Disciplina()
         {
-            PreRequisitos = new Disciplina[0];
+            this.Turmas = new List<Turma>();
+            this.Cursoes = new List<Curso>();
+            this.PreRequisitos = new List<Disciplina>();
+            this.RequisitoPara = new List<Disciplina>();
         }
 
-        [Key]
         public int Id { get; set; }
         public string Nome { get; set; }
         public int Creditos { get; set; }
-        public int PreReqCreditos { get; set; }
+        public int PreCreditos { get; set; }
         public short Semestre { get; set; }
         public bool Eletiva { get; set; }
-            
-        public IEnumerable<Disciplina> PreRequisitos { get; set; }
-        public IEnumerable<Disciplina> RequisitoPara { get; set; }
-
+        public virtual ICollection<Turma> Turmas { get; set; }
+        public virtual ICollection<Curso> Cursoes { get; set; }
+        public virtual ICollection<Disciplina> PreRequisitos { get; set; }
+        public virtual ICollection<Disciplina> RequisitoPara { get; set; }
         public int Peso
         {
             get
@@ -39,7 +41,5 @@ namespace AcadOracle.DomainModel
                 return points;
             }
         }
-
-
     }
 }

@@ -18,6 +18,8 @@ namespace AcadOracle.Dal.EntityModels
         {
             this.Turma = new HashSet<Turma>();
             this.Curso = new HashSet<Curso>();
+            this.Disciplina1 = new HashSet<Disciplina>();
+            this.Disciplina2 = new HashSet<Disciplina>();
         }
     
         public int Id { get; set; }
@@ -29,5 +31,7 @@ namespace AcadOracle.Dal.EntityModels
     
         public virtual ICollection<Turma> Turma { get; set; }
         public virtual ICollection<Curso> Curso { get; set; }
+        public virtual ICollection<Disciplina> Disciplina1 { get; set; }
+        public virtual ICollection<Disciplina> Disciplina2 { get; set; }
     }
 }

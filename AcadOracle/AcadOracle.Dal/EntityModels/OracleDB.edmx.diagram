@@ -4,19 +4,20 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="9a4fe72afe6d41f7b1b6ec36820d298e" Name="Diagram1" ZoomLevel="109">
-        <EntityTypeShape EntityType="AcadOracleDBModel.Curso" Width="1.5" PointX="10.485092516283082" PointY="9.1997958911581872" />
-        <EntityTypeShape EntityType="AcadOracleDBModel.Disciplina" Width="1.5" PointX="8.72165966998863" PointY="29.727394192352609" />
-        <EntityTypeShape EntityType="AcadOracleDBModel.Horario" Width="1.5" PointX="15.25" PointY="16.75" />
-        <EntityTypeShape EntityType="AcadOracleDBModel.TipoUsuario" Width="1.5" PointX="19.5" PointY="19.375" />
-        <EntityTypeShape EntityType="AcadOracleDBModel.Turma" Width="1.5" PointX="8.875" PointY="19.375" />
-        <EntityTypeShape EntityType="AcadOracleDBModel.TurmaHorario" Width="1.5" PointX="13.25" PointY="19.875" />
-        <EntityTypeShape EntityType="AcadOracleDBModel.Usuario" Width="1.5" PointX="16.875" PointY="18.875" />
+      <Diagram DiagramId="9a4fe72afe6d41f7b1b6ec36820d298e" Name="Diagram1" ZoomLevel="67">
+        <EntityTypeShape EntityType="AcadOracleDBModel.Curso" Width="1.5" PointX="7.875" PointY="30.375" />
+        <EntityTypeShape EntityType="AcadOracleDBModel.Disciplina" Width="1.5" PointX="4.875" PointY="31.25" />
+        <EntityTypeShape EntityType="AcadOracleDBModel.Horario" Width="1.5" PointX="7.875" PointY="32.75" />
+        <EntityTypeShape EntityType="AcadOracleDBModel.TipoUsuario" Width="1.5" PointX="10.5" PointY="32.625" />
+        <EntityTypeShape EntityType="AcadOracleDBModel.Turma" Width="1.5" PointX="4.875" PointY="36.625" />
+        <EntityTypeShape EntityType="AcadOracleDBModel.TurmaHorario" Width="1.5" PointX="8" PointY="36.625" />
+        <EntityTypeShape EntityType="AcadOracleDBModel.Usuario" Width="1.5" PointX="10.25" PointY="35.75" />
         <AssociationConnector Association="AcadOracleDBModel.FK_Turma_Disciplina" />
-        <AssociationConnector Association="AcadOracleDBModel.FK_TurmaHorario_Horario" />
         <AssociationConnector Association="AcadOracleDBModel.FK_Usuario_TipoUsuario" />
         <AssociationConnector Association="AcadOracleDBModel.FK_TurmaHorario_Turma" />
         <AssociationConnector Association="AcadOracleDBModel.CursoDisciplina" />
+        <AssociationConnector Association="AcadOracleDBModel.DisciplinasPreRequisitos" />
+        <AssociationConnector Association="AcadOracleDBModel.HoraAula" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AcadOracle.DomainModel;
+using AcadOracle.DomainModel.Models;
 
 namespace AcadOracle.Core.Interfaces
 {

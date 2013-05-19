@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AcadOracle.DomainModel;
+using AcadOracle.DomainModel.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace AcadOracle.UnitTests.TestHelpers

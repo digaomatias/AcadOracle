@@ -7,6 +7,7 @@ using AcadOracle.Common;
 using AcadOracle.Core.Interfaces;
 using AcadOracle.Dal.Interfaces;
 using AcadOracle.DomainModel;
+using AcadOracle.DomainModel.Models;
 using AcadOracle.DomainModel.Restricao;
 
 namespace AcadOracle.Core
@@ -54,14 +55,14 @@ namespace AcadOracle.Core
         {
             List<List<Turma>> listaDeCombinacoesConflitantes = new List<List<Turma>>();
 
-            var horarios = turmas.SelectMany(t => t.Horarios).ToList();
+            var horarios = turmas.SelectMany(t => t.TurmaHorarios).ToList();
 
             foreach (var horario in horarios)
             {
                 var conflitantes = turmas.Where(
                     t =>
-                    t.Horarios.Any(
-                        h => h.DiaSemana == horario.DiaSemana && h.HorasAula.Any(ha => horario.HorasAula.Contains(ha))))
+                    t.TurmaHorarios.Any(
+                        h => h.DiaSemana == horario.DiaSemana && h.Horarios.Any(ha => horario.Horarios.Contains(ha))))
                                          .ToList();
 
                 if (conflitantes.Count > 1 && !listaDeCombinacoesConflitantes.Any(

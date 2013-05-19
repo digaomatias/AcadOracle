@@ -48,14 +48,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ModelExtensions.cs" />
-    <Compile Include="Disciplina.cs" />
-    <Compile Include="Horario.cs" />
+    <Compile Include="Models\HoraAula.cs" />
+    <Compile Include="Models\AcadOracleDBContext.cs" />
+    <Compile Include="Models\Curso.cs" />
+    <Compile Include="Models\Disciplina.cs" />
+    <Compile Include="Models\Horario.cs" />
+    <Compile Include="Models\Mapping\CursoMap.cs" />
+    <Compile Include="Models\Mapping\DisciplinaMap.cs" />
+    <Compile Include="Models\Mapping\HorarioMap.cs" />
+    <Compile Include="Models\Mapping\TipoUsuarioMap.cs" />
+    <Compile Include="Models\Mapping\TurmaHorarioMap.cs" />
+    <Compile Include="Models\Mapping\TurmaMap.cs" />
+    <Compile Include="Models\Mapping\UsuarioMap.cs" />
+    <Compile Include="Models\TipoUsuario.cs" />
+    <Compile Include="Models\Turma.cs" />
+    <Compile Include="Models\TurmaHorario.cs" />
+    <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Restricao\Restricao.cs" />
     <Compile Include="Restricao\RestricaoCreditos.cs" />
     <Compile Include="Restricao\RestricaoDisciplinas.cs" />
     <Compile Include="Restricao\RestricaoHorarios.cs" />
-    <Compile Include="Turma.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

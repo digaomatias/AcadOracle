@@ -9,6 +9,8 @@
           <EntitySet Name="Curso" EntityType="AcadOracleDBModel.Store.Curso" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="CursoDisciplina" EntityType="AcadOracleDBModel.Store.CursoDisciplina" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Disciplina" EntityType="AcadOracleDBModel.Store.Disciplina" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DisciplinasPreRequisitos" EntityType="AcadOracleDBModel.Store.DisciplinasPreRequisitos" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HoraAula" EntityType="AcadOracleDBModel.Store.HoraAula" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Horario" EntityType="AcadOracleDBModel.Store.Horario" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="TipoUsuario" EntityType="AcadOracleDBModel.Store.TipoUsuario" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Turma" EntityType="AcadOracleDBModel.Store.Turma" store:Type="Tables" Schema="dbo" />
@@ -22,13 +24,25 @@
             <End Role="Disciplina" EntitySet="Disciplina" />
             <End Role="CursoDisciplina" EntitySet="CursoDisciplina" />
           </AssociationSet>
+          <AssociationSet Name="FK_DisciplinasPreRequisitos_Disciplina" Association="AcadOracleDBModel.Store.FK_DisciplinasPreRequisitos_Disciplina">
+            <End Role="Disciplina" EntitySet="Disciplina" />
+            <End Role="DisciplinasPreRequisitos" EntitySet="DisciplinasPreRequisitos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DisciplinasPreRequisitos_PreRequisito" Association="AcadOracleDBModel.Store.FK_DisciplinasPreRequisitos_PreRequisito">
+            <End Role="Disciplina" EntitySet="Disciplina" />
+            <End Role="DisciplinasPreRequisitos" EntitySet="DisciplinasPreRequisitos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HoraAula_Horario" Association="AcadOracleDBModel.Store.FK_HoraAula_Horario">
+            <End Role="Horario" EntitySet="Horario" />
+            <End Role="HoraAula" EntitySet="HoraAula" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HoraAula_TurmaHorario" Association="AcadOracleDBModel.Store.FK_HoraAula_TurmaHorario">
+            <End Role="TurmaHorario" EntitySet="TurmaHorario" />
+            <End Role="HoraAula" EntitySet="HoraAula" />
+          </AssociationSet>
           <AssociationSet Name="FK_Turma_Disciplina" Association="AcadOracleDBModel.Store.FK_Turma_Disciplina">
             <End Role="Disciplina" EntitySet="Disciplina" />
             <End Role="Turma" EntitySet="Turma" />
-          </AssociationSet>
-          <AssociationSet Name="FK_TurmaHorario_Horario" Association="AcadOracleDBModel.Store.FK_TurmaHorario_Horario">
-            <End Role="Horario" EntitySet="Horario" />
-            <End Role="TurmaHorario" EntitySet="TurmaHorario" />
           </AssociationSet>
           <AssociationSet Name="FK_TurmaHorario_Turma" Association="AcadOracleDBModel.Store.FK_TurmaHorario_Turma">
             <End Role="Turma" EntitySet="Turma" />
@@ -65,12 +79,28 @@
           <Property Name="Semestre" Type="smallint" Nullable="false" />
           <Property Name="Eletiva" Type="bit" Nullable="false" />
         </EntityType>
+        <EntityType Name="DisciplinasPreRequisitos">
+          <Key>
+            <PropertyRef Name="DisciplinaId" />
+            <PropertyRef Name="PreRequisitoId" />
+          </Key>
+          <Property Name="DisciplinaId" Type="int" Nullable="false" />
+          <Property Name="PreRequisitoId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HoraAula">
+          <Key>
+            <PropertyRef Name="HorarioId" />
+            <PropertyRef Name="TurmaHorarioId" />
+          </Key>
+          <Property Name="HorarioId" Type="int" Nullable="false" />
+          <Property Name="TurmaHorarioId" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="Horario">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" Nullable="false" />
-          <Property Name="Descricao" Type="nchar" Nullable="false" MaxLength="2" />
+          <Property Name="Descricao" Type="nchar" Nullable="false" MaxLength="1" />
         </EntityType>
         <EntityType Name="TipoUsuario">
           <Key>
@@ -89,11 +119,10 @@
         </EntityType>
         <EntityType Name="TurmaHorario">
           <Key>
-            <PropertyRef Name="TurmaId" />
-            <PropertyRef Name="HorarioId" />
+            <PropertyRef Name="Id" />
           </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
           <Property Name="TurmaId" Type="int" Nullable="false" />
-          <Property Name="HorarioId" Type="int" Nullable="false" />
           <Property Name="DiaSemana" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Usuario">
@@ -130,6 +159,54 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_DisciplinasPreRequisitos_Disciplina">
+          <End Role="Disciplina" Type="AcadOracleDBModel.Store.Disciplina" Multiplicity="1" />
+          <End Role="DisciplinasPreRequisitos" Type="AcadOracleDBModel.Store.DisciplinasPreRequisitos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Disciplina">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DisciplinasPreRequisitos">
+              <PropertyRef Name="DisciplinaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DisciplinasPreRequisitos_PreRequisito">
+          <End Role="Disciplina" Type="AcadOracleDBModel.Store.Disciplina" Multiplicity="1" />
+          <End Role="DisciplinasPreRequisitos" Type="AcadOracleDBModel.Store.DisciplinasPreRequisitos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Disciplina">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DisciplinasPreRequisitos">
+              <PropertyRef Name="PreRequisitoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HoraAula_Horario">
+          <End Role="Horario" Type="AcadOracleDBModel.Store.Horario" Multiplicity="1" />
+          <End Role="HoraAula" Type="AcadOracleDBModel.Store.HoraAula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Horario">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="HoraAula">
+              <PropertyRef Name="HorarioId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HoraAula_TurmaHorario">
+          <End Role="TurmaHorario" Type="AcadOracleDBModel.Store.TurmaHorario" Multiplicity="1" />
+          <End Role="HoraAula" Type="AcadOracleDBModel.Store.HoraAula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TurmaHorario">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="HoraAula">
+              <PropertyRef Name="TurmaHorarioId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Turma_Disciplina">
           <End Role="Disciplina" Type="AcadOracleDBModel.Store.Disciplina" Multiplicity="1" />
           <End Role="Turma" Type="AcadOracleDBModel.Store.Turma" Multiplicity="*" />
@@ -139,18 +216,6 @@
             </Principal>
             <Dependent Role="Turma">
               <PropertyRef Name="DisciplinaId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_TurmaHorario_Horario">
-          <End Role="Horario" Type="AcadOracleDBModel.Store.Horario" Multiplicity="1" />
-          <End Role="TurmaHorario" Type="AcadOracleDBModel.Store.TurmaHorario" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Horario">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="TurmaHorario">
-              <PropertyRef Name="HorarioId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -194,10 +259,6 @@
             <End Role="Disciplina" EntitySet="Disciplina" />
             <End Role="Turma" EntitySet="Turma" />
           </AssociationSet>
-          <AssociationSet Name="FK_TurmaHorario_Horario" Association="AcadOracleDBModel.FK_TurmaHorario_Horario">
-            <End Role="Horario" EntitySet="Horario" />
-            <End Role="TurmaHorario" EntitySet="TurmaHorario" />
-          </AssociationSet>
           <AssociationSet Name="FK_Usuario_TipoUsuario" Association="AcadOracleDBModel.FK_Usuario_TipoUsuario">
             <End Role="TipoUsuario" EntitySet="TipoUsuario" />
             <End Role="Usuario" EntitySet="Usuario" />
@@ -209,6 +270,14 @@
           <AssociationSet Name="CursoDisciplina" Association="AcadOracleDBModel.CursoDisciplina">
             <End Role="Curso" EntitySet="Curso" />
             <End Role="Disciplina" EntitySet="Disciplina" />
+          </AssociationSet>
+          <AssociationSet Name="DisciplinasPreRequisitos" Association="AcadOracleDBModel.DisciplinasPreRequisitos">
+            <End Role="Disciplina" EntitySet="Disciplina" />
+            <End Role="Disciplina1" EntitySet="Disciplina" />
+          </AssociationSet>
+          <AssociationSet Name="HoraAula" Association="AcadOracleDBModel.HoraAula">
+            <End Role="Horario" EntitySet="Horario" />
+            <End Role="TurmaHorario" EntitySet="TurmaHorario" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="Curso">
@@ -231,14 +300,16 @@
           <Property Type="Boolean" Name="Eletiva" Nullable="false" />
           <NavigationProperty Name="Turma" Relationship="AcadOracleDBModel.FK_Turma_Disciplina" FromRole="Disciplina" ToRole="Turma" />
           <NavigationProperty Name="Curso" Relationship="AcadOracleDBModel.CursoDisciplina" FromRole="Disciplina" ToRole="Curso" />
+          <NavigationProperty Name="Disciplina1" Relationship="AcadOracleDBModel.DisciplinasPreRequisitos" FromRole="Disciplina" ToRole="Disciplina1" />
+          <NavigationProperty Name="Disciplina2" Relationship="AcadOracleDBModel.DisciplinasPreRequisitos" FromRole="Disciplina1" ToRole="Disciplina" />
         </EntityType>
         <EntityType Name="Horario">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Type="Int32" Name="Id" Nullable="false" />
-          <Property Type="String" Name="Descricao" Nullable="false" MaxLength="2" FixedLength="true" Unicode="true" />
-          <NavigationProperty Name="TurmaHorario" Relationship="AcadOracleDBModel.FK_TurmaHorario_Horario" FromRole="Horario" ToRole="TurmaHorario" />
+          <Property Type="String" Name="Descricao" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="TurmaHorario" Relationship="AcadOracleDBModel.HoraAula" FromRole="Horario" ToRole="TurmaHorario" />
         </EntityType>
         <EntityType Name="TipoUsuario">
           <Key>
@@ -260,14 +331,13 @@
         </EntityType>
         <EntityType Name="TurmaHorario">
           <Key>
-            <PropertyRef Name="TurmaId" />
-            <PropertyRef Name="HorarioId" />
+            <PropertyRef Name="Id" />
           </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" />
           <Property Type="Int32" Name="TurmaId" Nullable="false" />
-          <Property Type="Int32" Name="HorarioId" Nullable="false" />
           <Property Type="Int32" Name="DiaSemana" Nullable="false" />
-          <NavigationProperty Name="Horario" Relationship="AcadOracleDBModel.FK_TurmaHorario_Horario" FromRole="TurmaHorario" ToRole="Horario" />
           <NavigationProperty Name="Turma" Relationship="AcadOracleDBModel.FK_TurmaHorario_Turma" FromRole="TurmaHorario" ToRole="Turma" />
+          <NavigationProperty Name="Horario" Relationship="AcadOracleDBModel.HoraAula" FromRole="TurmaHorario" ToRole="Horario" />
         </EntityType>
         <EntityType Name="Usuario">
           <Key>
@@ -289,18 +359,6 @@
             </Principal>
             <Dependent Role="Turma">
               <PropertyRef Name="DisciplinaId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_TurmaHorario_Horario">
-          <End Type="AcadOracleDBModel.Horario" Role="Horario" Multiplicity="1" />
-          <End Type="AcadOracleDBModel.TurmaHorario" Role="TurmaHorario" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Horario">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="TurmaHorario">
-              <PropertyRef Name="HorarioId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -332,7 +390,15 @@
           <End Type="AcadOracleDBModel.Curso" Role="Curso" Multiplicity="*" />
           <End Type="AcadOracleDBModel.Disciplina" Role="Disciplina" Multiplicity="*" />
         </Association>
-      </Schema>
+        <Association Name="DisciplinasPreRequisitos">
+          <End Type="AcadOracleDBModel.Disciplina" Role="Disciplina" Multiplicity="*" />
+          <End Type="AcadOracleDBModel.Disciplina" Role="Disciplina1" Multiplicity="*" />
+        </Association>
+        <Association Name="HoraAula">
+          <End Type="AcadOracleDBModel.Horario" Role="Horario" Multiplicity="*" />
+          <End Type="AcadOracleDBModel.TurmaHorario" Role="TurmaHorario" Multiplicity="*" />
+        </Association>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -387,8 +453,8 @@
             <EntityTypeMapping TypeName="AcadOracleDBModel.TurmaHorario">
               <MappingFragment StoreEntitySet="TurmaHorario">
                 <ScalarProperty Name="DiaSemana" ColumnName="DiaSemana" />
-                <ScalarProperty Name="HorarioId" ColumnName="HorarioId" />
                 <ScalarProperty Name="TurmaId" ColumnName="TurmaId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -409,6 +475,22 @@
             </EndProperty>
             <EndProperty Name="Curso">
               <ScalarProperty Name="Id" ColumnName="CursoId" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="DisciplinasPreRequisitos" TypeName="AcadOracleDBModel.DisciplinasPreRequisitos" StoreEntitySet="DisciplinasPreRequisitos">
+            <EndProperty Name="Disciplina1">
+              <ScalarProperty Name="Id" ColumnName="PreRequisitoId" />
+            </EndProperty>
+            <EndProperty Name="Disciplina">
+              <ScalarProperty Name="Id" ColumnName="DisciplinaId" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="HoraAula" TypeName="AcadOracleDBModel.HoraAula" StoreEntitySet="HoraAula">
+            <EndProperty Name="TurmaHorario">
+              <ScalarProperty Name="Id" ColumnName="TurmaHorarioId" />
+            </EndProperty>
+            <EndProperty Name="Horario">
+              <ScalarProperty Name="Id" ColumnName="HorarioId" />
             </EndProperty>
           </AssociationSetMapping>
         </EntityContainerMapping>
