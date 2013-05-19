@@ -6,7 +6,9 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using AcadOracle.Common;
 using AcadOracle.Core.Interfaces;
+using AcadOracle.WebMVC.Infrastructure;
 using SimpleInjector;
 
 namespace AcadOracle.WebMVC
@@ -31,7 +33,7 @@ namespace AcadOracle.WebMVC
 
         private void InitDependencyInjection()
         {
-            Container container = new Container();
+            SimpleInjectorInitializer.Initialize();
         }
     }
 }

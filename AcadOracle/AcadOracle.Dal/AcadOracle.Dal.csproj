@@ -52,6 +52,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Infrastructure\HttpContext.cs" />
+    <Compile Include="CursoRepository.cs" />
     <Compile Include="EntityModels\Curso.cs">
       <DependentUpon>OracleDB.tt</DependentUpon>
     </Compile>
@@ -88,6 +90,7 @@
     <Compile Include="EntityModels\Usuario.cs">
       <DependentUpon>OracleDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\ICursoRepository.cs" />
     <Compile Include="Interfaces\IDisciplineRepository.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Interfaces\IRepositoryContext.cs" />
