@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 
 namespace AcadOracle.DomainModel
@@ -14,16 +15,18 @@ namespace AcadOracle.DomainModel
 
         public Disciplina()
         {
-            RequisitoPara = new Disciplina[0];
+            PreRequisitos = new Disciplina[0];
         }
 
+        [Key]
         public int Id { get; set; }
         public string Nome { get; set; }
         public int Creditos { get; set; }
         public int PreReqCreditos { get; set; }
         public short Semestre { get; set; }
         public bool Eletiva { get; set; }
-
+            
+        public IEnumerable<Disciplina> PreRequisitos { get; set; }
         public IEnumerable<Disciplina> RequisitoPara { get; set; }
 
         public int Peso
@@ -31,7 +34,7 @@ namespace AcadOracle.DomainModel
             get
             {
                 int points = (MaxSemestres - Semestre) * PesoSemestre;
-                points += RequisitoPara.Count() * PesoDependencia;
+                points += PreRequisitos.Count() * PesoDependencia;
 
                 return points;
             }

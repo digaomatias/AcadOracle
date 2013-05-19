@@ -25,5 +25,10 @@ namespace AcadOracle.Common
                 return container;
             }
         }
+
+        public static void RenewContainer()
+        {
+            container = new Container();
+        }
     }
 }
