@@ -16,7 +16,7 @@ namespace AcadOracle.DomainModel.Models
         {
         }
 
-        public DbSet<Curso> Cursoes { get; set; }
+        public DbSet<Curso> Cursos { get; set; }
         public DbSet<Disciplina> Disciplinas { get; set; }
         public DbSet<Horario> Horarios { get; set; }
         public DbSet<TipoUsuario> TipoUsuarios { get; set; }

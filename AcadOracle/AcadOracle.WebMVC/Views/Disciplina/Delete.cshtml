@@ -1,0 +1,50 @@
+@model AcadOracle.DomainModel.Models.Disciplina
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Disciplina</legend>
+
+    <div class="display-label">Nome</div>
+    <div class="display-field">@Model.Nome</div>
+
+    <div class="display-label">Creditos</div>
+    <div class="display-field">@Model.Creditos</div>
+
+    <div class="display-label">PreCreditos</div>
+    <div class="display-field">@Model.PreCreditos</div>
+
+    <div class="display-label">Semestre</div>
+    <div class="display-field">@Model.Semestre</div>
+
+    <div class="display-label">Eletiva</div>
+    <div class="display-field">@Model.Eletiva</div>
+
+    <div class="display-label">Turmas</div>
+    <div class="display-field">@(Model.Turmas == null ? "None" : Model.Turmas.Count.ToString())</div>
+
+    <div class="display-label">Cursoes</div>
+    <div class="display-field">@(Model.Cursoes == null ? "None" : Model.Cursoes.Count.ToString())</div>
+
+    <div class="display-label">PreRequisitos</div>
+    <div class="display-field">@(Model.PreRequisitos == null ? "None" : Model.PreRequisitos.Count.ToString())</div>
+
+    <div class="display-label">RequisitoPara</div>
+    <div class="display-field">@(Model.RequisitoPara == null ? "None" : Model.RequisitoPara.Count.ToString())</div>
+
+    <div class="display-label">Peso</div>
+    <div class="display-field">@Model.Peso</div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
+
+

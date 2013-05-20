@@ -10,6 +10,8 @@ Post-Deployment Script Template
 --------------------------------------------------------------------------------------
 */
 
+DELETE FROM Horario;
+
 INSERT INTO Horario (Id, Descricao)
 VALUES (1, 'A');
 INSERT INTO Horario (Id, Descricao)

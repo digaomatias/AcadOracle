@@ -11,7 +11,7 @@ namespace AcadOracle.WebMVC.Models
     public class UsersContext : DbContext
     {
         public UsersContext()
-            : base("DefaultConnection")
+            : base("AcadOracleDB")
         {
         }
 

@@ -1,0 +1,23 @@
+@model AcadOracle.DomainModel.Models.Turma
+
+@* This partial view defines form fields that will appear when creating and editing entities *@
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Numero)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Numero)
+    @Html.ValidationMessageFor(model => model.Numero)
+</div>
+
+<div class="editor-label">
+    Disciplina
+</div>
+<div class="editor-field">
+    @Html.DropDownListFor(model => model.DisciplinaId, ((IEnumerable<AcadOracle.DomainModel.Models.Disciplina>)ViewBag.PossibleDisciplinas).Select(option => new SelectListItem {
+        Text = Html.DisplayTextFor(_ => option).ToString(), 
+        Value = option.Id.ToString(),
+        Selected = (Model != null) && (option.Id == Model.DisciplinaId)
+    }), "Choose...")
+    @Html.ValidationMessageFor(model => model.DisciplinaId)
+</div>

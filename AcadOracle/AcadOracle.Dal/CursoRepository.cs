@@ -4,17 +4,14 @@ using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 using AcadOracle.Dal.Interfaces;
 using AcadOracle.DomainModel.Models;
-using AcadOracle.WebMVC.Models;
 
 namespace AcadOracle.Dal
 {
     public class CursoRepository : ICursoRepository
     {
-        HttpContext context = new HttpContext();
+        AcadOracleDBContext context = new AcadOracleDBContext();
 
         public IQueryable<Curso> All
         {

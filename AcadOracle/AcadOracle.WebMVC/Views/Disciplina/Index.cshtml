@@ -1,0 +1,89 @@
+@model IEnumerable<AcadOracle.DomainModel.Models.Disciplina>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th></th>
+        <th>
+            Nome
+        </th>
+        <th>
+            Creditos
+        </th>
+        <th>
+            PreCreditos
+        </th>
+        <th>
+            Semestre
+        </th>
+        <th>
+            Eletiva
+        </th>
+        <th>
+            Turmas
+        </th>
+        <th>
+            Cursoes
+        </th>
+        <th>
+            PreRequisitos
+        </th>
+        <th>
+            RequisitoPara
+        </th>
+        <th>
+            Peso
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+        <td>
+			@item.Nome
+        </td>
+        <td>
+			@item.Creditos
+        </td>
+        <td>
+			@item.PreCreditos
+        </td>
+        <td>
+			@item.Semestre
+        </td>
+        <td>
+			@item.Eletiva
+        </td>
+        <td>
+			@(item.Turmas == null ? "None" : item.Turmas.Count.ToString())
+        </td>
+        <td>
+			@(item.Cursoes == null ? "None" : item.Cursoes.Count.ToString())
+        </td>
+        <td>
+			@(item.PreRequisitos == null ? "None" : item.PreRequisitos.Count.ToString())
+        </td>
+        <td>
+			@(item.RequisitoPara == null ? "None" : item.RequisitoPara.Count.ToString())
+        </td>
+        <td>
+			@item.Peso
+        </td>
+    </tr>
+}
+
+</table>
+
+

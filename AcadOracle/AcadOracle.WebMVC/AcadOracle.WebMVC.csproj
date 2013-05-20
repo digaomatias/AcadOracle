@@ -177,7 +177,10 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CursoesController.cs" />
+    <Compile Include="Controllers\DisciplinaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TurmaController.cs" />
+    <Compile Include="Controllers\TurmaHorarioController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -304,6 +307,24 @@
     <Content Include="Views\Cursoes\Details.cshtml" />
     <Content Include="Views\Cursoes\Index.cshtml" />
     <Content Include="Views\Cursoes\_CreateOrEdit.cshtml" />
+    <Content Include="Views\Disciplina\Create.cshtml" />
+    <Content Include="Views\Disciplina\Edit.cshtml" />
+    <Content Include="Views\Disciplina\Delete.cshtml" />
+    <Content Include="Views\Disciplina\Details.cshtml" />
+    <Content Include="Views\Disciplina\Index.cshtml" />
+    <Content Include="Views\Disciplina\_CreateOrEdit.cshtml" />
+    <Content Include="Views\Turma\Create.cshtml" />
+    <Content Include="Views\Turma\Edit.cshtml" />
+    <Content Include="Views\Turma\Delete.cshtml" />
+    <Content Include="Views\Turma\Details.cshtml" />
+    <Content Include="Views\Turma\Index.cshtml" />
+    <Content Include="Views\Turma\_CreateOrEdit.cshtml" />
+    <Content Include="Views\TurmaHorario\Create.cshtml" />
+    <Content Include="Views\TurmaHorario\Edit.cshtml" />
+    <Content Include="Views\TurmaHorario\Delete.cshtml" />
+    <Content Include="Views\TurmaHorario\Details.cshtml" />
+    <Content Include="Views\TurmaHorario\Index.cshtml" />
+    <Content Include="Views\TurmaHorario\_CreateOrEdit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

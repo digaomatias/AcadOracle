@@ -33,6 +33,9 @@ namespace AcadOracle.WebMVC.Infrastructure
 
             // Register your types, for instance:
             container.Register<ICursoRepository, CursoRepository>();
+            container.Register<ITurmaRepository, TurmaRepository>();
+            container.Register<IDisciplinaRepository, DisciplinaRepository>();
+            container.Register<ITurmaHorarioRepository, TurmaHorarioRepository>();
 
             // register MVC controllers (This is an extension method from the integration package).
             container.RegisterMvcControllers(Assembly.GetExecutingAssembly());

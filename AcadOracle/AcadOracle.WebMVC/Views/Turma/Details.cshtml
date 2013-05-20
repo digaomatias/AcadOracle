@@ -1,0 +1,26 @@
+@model AcadOracle.DomainModel.Models.Turma
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Turma</legend>
+
+    <div class="display-label">Numero</div>
+    <div class="display-field">@Model.Numero</div>
+
+    <div class="display-label">Disciplina</div>
+    <div class="display-field">@Html.DisplayTextFor(_ => Model.Disciplina).ToString()</div>
+
+    <div class="display-label">TurmaHorarios</div>
+    <div class="display-field">@(Model.TurmaHorarios == null ? "None" : Model.TurmaHorarios.Count.ToString())</div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+
