@@ -15,11 +15,7 @@ namespace AcadOracle.WebMVC.Controllers
 		private readonly IDisciplinaRepository disciplinaRepository;
 		private readonly ITurmaRepository turmaRepository;
 
-		// If you are using Dependency Injection, you can delete the following constructor
-        private TurmaController() : this(new DisciplinaRepository(), new TurmaRepository())
-        {
-        }
-
+	
         public TurmaController(IDisciplinaRepository disciplinaRepository, ITurmaRepository turmaRepository)
         {
 			this.disciplinaRepository = disciplinaRepository;

@@ -13,15 +13,12 @@ namespace AcadOracle.WebMVC.Controllers
     public class DisciplinaController : Controller
     {
 		private readonly IDisciplinaRepository disciplinaRepository;
-
-		// If you are using Dependency Injection, you can delete the following constructor
-        private DisciplinaController() : this(new DisciplinaRepository())
-        {
-        }
-
-        public DisciplinaController(IDisciplinaRepository disciplinaRepository)
+        private readonly ICursoRepository cursoRepository;
+        
+        public DisciplinaController(IDisciplinaRepository disciplinaRepository, ICursoRepository cursoRepository)
         {
 			this.disciplinaRepository = disciplinaRepository;
+            this.cursoRepository = cursoRepository;
         }
 
         //
@@ -43,10 +40,22 @@ namespace AcadOracle.WebMVC.Controllers
         //
         // GET: /Disciplina/Create
 
-        public ActionResult Create()
+        //public ActionResult Create()
+        //{
+        //    ViewBag.CursoList = new SelectList(cursoRepository.All.ToArray(), "Id", "Nome");
+            
+        //    return View();
+        //}
+
+        public ActionResult Create(int? cursoId)
         {
+            if(cursoId != null && cursoId.HasValue)
+                ViewBag.CursoList = new SelectList(cursoRepository.All.ToArray(), "Id", "Nome", cursoId.Value);
+            else
+                ViewBag.CursoList = new SelectList(cursoRepository.All.ToArray(), "Id", "Nome");
+
             return View();
-        } 
+        }
 
         //
         // POST: /Disciplina/Create

@@ -15,7 +15,7 @@
 </div>
 <div class="editor-field">
     @Html.DropDownListFor(model => model.DisciplinaId, ((IEnumerable<AcadOracle.DomainModel.Models.Disciplina>)ViewBag.PossibleDisciplinas).Select(option => new SelectListItem {
-        Text = Html.DisplayTextFor(_ => option).ToString(), 
+        Text = Html.DisplayTextFor(_ => option.Nome).ToString(), 
         Value = option.Id.ToString(),
         Selected = (Model != null) && (option.Id == Model.DisciplinaId)
     }), "Choose...")

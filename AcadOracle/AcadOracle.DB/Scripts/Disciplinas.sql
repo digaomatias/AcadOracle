@@ -9,56 +9,6 @@ Post-Deployment Script Template
                SELECT * FROM [$(TableName)]					
 --------------------------------------------------------------------------------------
 */
-
---Adiciona os horários
-DELETE FROM Horario;
-
-INSERT INTO Horario (Id, Descricao)
-VALUES (1, 'A');
-INSERT INTO Horario (Id, Descricao)
-VALUES (2, 'B');
-INSERT INTO Horario (Id, Descricao)
-VALUES (3, 'C');
-INSERT INTO Horario (Id, Descricao)
-VALUES (4, 'D');
-INSERT INTO Horario (Id, Descricao)
-VALUES (5, 'E');
-INSERT INTO Horario (Id, Descricao)
-VALUES (6, 'F');
-INSERT INTO Horario (Id, Descricao)
-VALUES (7, 'G');
-INSERT INTO Horario (Id, Descricao)
-VALUES (8, 'H');
-INSERT INTO Horario (Id, Descricao)
-VALUES (9, 'I');
-INSERT INTO Horario (Id, Descricao)
-VALUES (10, 'J');
-INSERT INTO Horario (Id, Descricao)
-VALUES (11, 'K');
-INSERT INTO Horario (Id, Descricao)
-VALUES (12, 'L');
-INSERT INTO Horario (Id, Descricao)
-VALUES (13, 'M');
-INSERT INTO Horario (Id, Descricao)
-VALUES (14, 'N');
-INSERT INTO Horario (Id, Descricao)
-VALUES (15, 'P');
-
-GO
-
---Adiciona o curso de CC
-DELETE FROM CursoDisciplina;
-DELETE FROM Curso;
-
-INSERT INTO [dbo].[Curso]
-           ([Nome])
-     VALUES
-           ('Ciências da Computação')
-GO
-
-
-DELETE FROM Disciplina;
-
 DECLARE @semestre INT = 1;
 INSERT INTO [dbo].[Disciplina] ([Nome], [Creditos], [PreCreditos], [Semestre], [Eletiva])
 VALUES ('Matematica Discreta',4 , @semestre,1,0);	
@@ -179,18 +129,3 @@ INSERT INTO [dbo].[Disciplina] ([Nome], [Creditos], [PreCreditos], [Semestre], [
 VALUES ('Sistemas Embarcados',4 , @semestre,1,0);
 INSERT INTO [dbo].[Disciplina] ([Nome], [Creditos], [PreCreditos], [Semestre], [Eletiva])
 VALUES ('Programacao Distribuida',4 , @semestre,1,0);
-
-GO
-
---Adiciona as disciplinas no curso de CC.
-DECLARE @CursoId INT;
-SELECT TOP 1 @CursoId = Id FROM Curso;
-
-INSERT INTO [dbo].[CursoDisciplina]
-           ([CursoId]
-           ,[DisciplinaId])
-SELECT @CursoId, Id FROM Disciplina;
-
-GO
-
-

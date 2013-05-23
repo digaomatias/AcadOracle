@@ -1,12 +1,12 @@
 @model AcadOracle.DomainModel.Models.Curso
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Deletar";
 }
 
-<h2>Delete</h2>
+<h2>Deletar</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Tem certeza que deseja deletar o curso?</h3>
 <fieldset>
     <legend>Curso</legend>
 
@@ -19,7 +19,7 @@
 @using (Html.BeginForm()) {
     <p>
         <input type="submit" value="Delete" /> |
-        @Html.ActionLink("Back to List", "Index")
+        @Html.ActionLink("Voltar para a lista", "Index")
     </p>
 }
 

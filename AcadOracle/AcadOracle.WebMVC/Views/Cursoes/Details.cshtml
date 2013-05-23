@@ -1,7 +1,7 @@
 @model AcadOracle.DomainModel.Models.Curso
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Detalhes do Curso";
 }
 
 <h2>Details</h2>
@@ -12,12 +12,12 @@
     <div class="display-label">Nome</div>
     <div class="display-field">@Model.Nome</div>
 
-    <div class="display-label">Disciplinas</div>
+    <div class="display-label">Disciplinas (@Html.ActionLink("Add", "Create", "Disciplina", new {cursoId = Model.Id}, null))</div>
     <div class="display-field">@(Model.Disciplinas == null ? "None" : Model.Disciplinas.Count.ToString())</div>
 </fieldset>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Editar", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Voltar para a lista", "Index")
 </p>
 
 

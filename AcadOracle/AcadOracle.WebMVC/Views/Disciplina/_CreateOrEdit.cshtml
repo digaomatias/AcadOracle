@@ -3,6 +3,13 @@
 @* This partial view defines form fields that will appear when creating and editing entities *@
 
 <div class="editor-label">
+    @Html.LabelFor(model => model.Cursoes)
+</div>
+<div class="editor-field">
+    @Html.DropDownListFor(model => model.Cursoes, (SelectList)ViewBag.CursoList )
+</div>
+
+<div class="editor-label">
     @Html.LabelFor(model => model.Nome)
 </div>
 <div class="editor-field">
