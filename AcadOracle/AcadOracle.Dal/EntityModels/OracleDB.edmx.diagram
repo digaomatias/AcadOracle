@@ -5,15 +5,13 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="9a4fe72afe6d41f7b1b6ec36820d298e" Name="Diagram1" ZoomLevel="77">
-        <EntityTypeShape EntityType="AcadOracleDBModel.Curso" Width="1.5" PointX="6" PointY="12" />
-        <EntityTypeShape EntityType="AcadOracleDBModel.Disciplina" Width="1.5" PointX="7.2631020952309955" PointY="5.2167948061678535" />
-        <EntityTypeShape EntityType="AcadOracleDBModel.TipoUsuario" Width="1.5" PointX="5.75" PointY="14.25" />
-        <EntityTypeShape EntityType="AcadOracleDBModel.Turma" Width="1.5" PointX="3" PointY="16.625" />
-        <EntityTypeShape EntityType="AcadOracleDBModel.TurmaHorario" Width="1.5" PointX="7.125" PointY="16.875" />
-        <EntityTypeShape EntityType="AcadOracleDBModel.Usuario" Width="1.5" PointX="9.5" PointY="13.875" />
+        <EntityTypeShape EntityType="AcadOracleDBModel.Curso" Width="1.5" PointX="2.75" PointY="19.125" />
+        <EntityTypeShape EntityType="AcadOracleDBModel.Disciplina" Width="1.5" PointX="2.625" PointY="21.75" />
+        <EntityTypeShape EntityType="AcadOracleDBModel.TipoUsuario" Width="1.5" PointX="5.75" PointY="19" />
+        <EntityTypeShape EntityType="AcadOracleDBModel.Turma" Width="1.5" PointX="5.75" PointY="21.375" />
+        <EntityTypeShape EntityType="AcadOracleDBModel.Usuario" Width="1.5" PointX="9.25" PointY="18.875" />
         <AssociationConnector Association="AcadOracleDBModel.FK_Turma_Disciplina" />
         <AssociationConnector Association="AcadOracleDBModel.FK_Usuario_TipoUsuario" />
-        <AssociationConnector Association="AcadOracleDBModel.FK_TurmaHorario_Turma" />
         <AssociationConnector Association="AcadOracleDBModel.CursoDisciplina" />
         <AssociationConnector Association="AcadOracleDBModel.DisciplinasPreRequisitos" />
       </Diagram>

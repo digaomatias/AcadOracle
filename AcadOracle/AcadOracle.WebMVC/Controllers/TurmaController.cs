@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using AcadOracle.Dal;
 using AcadOracle.Dal.Interfaces;
+using AcadOracle.DomainModel;
 using AcadOracle.DomainModel.Models;
 using AcadOracle.WebMVC.Models;
 using Moo;
@@ -28,7 +29,7 @@ namespace AcadOracle.WebMVC.Controllers
 
         public ViewResult Index()
         {
-            return View(turmaRepository.AllIncluding(turma => turma.Disciplina, turma => turma.TurmaHorarios));
+            return View(turmaRepository.AllIncluding(turma => turma.Disciplina));
         }
 
         //
@@ -57,6 +58,7 @@ namespace AcadOracle.WebMVC.Controllers
             if (ModelState.IsValid)
             {
                 var result = turma.MapTo<Turma>();
+                result.TurmaHorarios = turma.TurmaHorario.ToTurmaHorarios();
 
                 turmaRepository.InsertOrUpdate(result);
                 turmaRepository.Save();
@@ -73,17 +75,23 @@ namespace AcadOracle.WebMVC.Controllers
         public ActionResult Edit(int id)
         {
 			ViewBag.PossibleDisciplinas = disciplinaRepository.All;
-             return View(turmaRepository.Find(id));
+
+            Turma turma = turmaRepository.Find(id);
+
+            return View(turma.MapTo<TurmaEditModel>());
         }
 
         //
         // POST: /Turma/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(Turma turma)
+        public ActionResult Edit(TurmaEditModel turma)
         {
-            if (ModelState.IsValid) {
-                turmaRepository.InsertOrUpdate(turma);
+            if (ModelState.IsValid)
+            {
+                var result = turma.MapTo<Turma>();
+                
+                turmaRepository.InsertOrUpdate(result);
                 turmaRepository.Save();
                 return RedirectToAction("Index");
             } else {

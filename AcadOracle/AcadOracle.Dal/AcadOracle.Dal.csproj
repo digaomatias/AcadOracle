@@ -81,9 +81,6 @@
     <Compile Include="EntityModels\Turma.cs">
       <DependentUpon>OracleDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="EntityModels\TurmaHorario.cs">
-      <DependentUpon>OracleDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="EntityModels\Usuario.cs">
       <DependentUpon>OracleDB.tt</DependentUpon>
     </Compile>
@@ -93,7 +90,6 @@
     <Compile Include="Interfaces\IRepositoryContext.cs" />
     <Compile Include="Interfaces\ITurmaRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TurmaHorarioRepository.cs" />
     <Compile Include="TurmaRepository.cs" />
   </ItemGroup>
   <ItemGroup>

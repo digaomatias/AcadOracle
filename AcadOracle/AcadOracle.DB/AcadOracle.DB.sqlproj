@@ -66,7 +66,6 @@
     <Build Include="Tables\Disciplina.sql" />
     <Build Include="Tables\Curso.sql" />
     <Build Include="Tables\Turma.sql" />
-    <Build Include="Tables\TurmaHorario.sql" />
     <Build Include="Tables\CursoDisciplina.sql" />
     <Build Include="Tables\DisciplinasPreRequisitos.sql" />
   </ItemGroup>

@@ -7,13 +7,18 @@ namespace AcadOracle.DomainModel.Models
     {
         public Turma()
         {
-            this.TurmaHorarios = new List<TurmaHorario>();
         }
 
         public int Id { get; set; }
         public int DisciplinaId { get; set; }
         public int Numero { get; set; }
+        public string TurmaHorario { get; set; }
         public virtual Disciplina Disciplina { get; set; }
-        public virtual ICollection<TurmaHorario> TurmaHorarios { get; set; }
+
+        public ICollection<TurmaHorario> TurmaHorarios
+        {
+            get { return TurmaHorario.ToTurmaHorarios(); }
+            set { TurmaHorario = value.ToTurmaHorarioString(); }
+        }
     }
 }

@@ -41,25 +41,32 @@ namespace AcadOracle.DomainModel
             return turmas;
         }
 
-        public static IEnumerable<TurmaHorario> ToTurmaHorarios(this string th)
+        public static ICollection<TurmaHorario> ToTurmaHorarios(this string th)
         {
             Regex regex = new Regex(turmahorarioRegex);
             Match match = regex.Match(th);
             CaptureCollection captures = match.Groups[1].Captures;
 
-            List<TurmaHorario> turmahorarios = new List<TurmaHorario>();
+            HashSet<TurmaHorario> turmahorarios = new HashSet<TurmaHorario>();
 
             foreach (var capture in captures)
             {
                 string capt = capture.ToString();
 
-                DayOfWeek diaSemana = (DayOfWeek)int.Parse(capt.Substring(0, 1));
+                DiaDaSemana diaSemana = (DiaDaSemana)int.Parse(capt.Substring(0, 1));
                 IEnumerable<HoraAula> horasAula = capt.Substring(1).ToHoraAula();
 
-                turmahorarios.Add(new TurmaHorario(){DiaSemana = diaSemana});
+                turmahorarios.Add(new TurmaHorario(){DiaSemana = diaSemana, Horarios = horasAula});
                 }
 
-            return null;
+            return turmahorarios;
+        }
+
+        public static string ToTurmaHorarioString(this ICollection<TurmaHorario> turmaHorarios)
+        {
+            string result = string.Concat(turmaHorarios.Select(th => ((int) th.DiaSemana).ToString() + th.Horario));
+            
+            return result;
         }
 
         internal static IEnumerable<HoraAula> ToHoraAula(this string hs)

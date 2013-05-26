@@ -23,7 +23,7 @@ namespace AcadOracle.UnitTests
     [TestClass]
     public class OracleServiceTest
     {
-        private Turma CriarTurma(Disciplina disc, HoraAula[] horas, DayOfWeek[] dias )
+        private Turma CriarTurma(Disciplina disc, HoraAula[] horas, DiaDaSemana[] dias )
         {
             HashSet<TurmaHorario> horarios = new HashSet<TurmaHorario>();
             foreach (var dia in dias)
@@ -101,12 +101,12 @@ namespace AcadOracle.UnitTests
             int semestreAtual = 1;
             
             Turma turmaD1 = CriarTurma(d1, new[] {HoraAula.J, HoraAula.K, },
-                                       new[] {DayOfWeek.Monday, DayOfWeek.Wednesday, DayOfWeek.Friday});
+                                       new[] {DiaDaSemana.Monday, DiaDaSemana.Wednesday, DiaDaSemana.Friday});
             Turma turmaD2 = CriarTurma(d2, new [] { HoraAula.J, HoraAula.K },
-                                       new[] { DayOfWeek.Tuesday, DayOfWeek.Thursday });
+                                       new[] { DiaDaSemana.Tuesday, DiaDaSemana.Thursday });
           
             Turma turmaD4 = CriarTurma(d4, new [] { HoraAula.J, HoraAula.K },
-                                       new[] { DayOfWeek.Monday, DayOfWeek.Wednesday });
+                                       new[] { DiaDaSemana.Monday, DiaDaSemana.Wednesday });
             #endregion
 
             #region Mock
@@ -180,22 +180,22 @@ namespace AcadOracle.UnitTests
             int semestreAtual = 1;
             
             Turma turmaD1 = CriarTurma(d1, new [] { HoraAula.J, HoraAula.K },
-                                       new [] { DayOfWeek.Monday, DayOfWeek.Wednesday, DayOfWeek.Friday });
+                                       new [] { DiaDaSemana.Monday, DiaDaSemana.Wednesday, DiaDaSemana.Friday });
             Turma turmaD2 = CriarTurma(d2, new [] { HoraAula.J, HoraAula.K },
-                                       new [] { DayOfWeek.Tuesday, DayOfWeek.Thursday });
+                                       new [] { DiaDaSemana.Tuesday, DiaDaSemana.Thursday });
 
             Turma turmaD4 = CriarTurma(d4, new[] { HoraAula.J, HoraAula.K },
-                                       new [] { DayOfWeek.Monday, DayOfWeek.Wednesday });
+                                       new [] { DiaDaSemana.Monday, DiaDaSemana.Wednesday });
 
             Turma turmaD5 = CriarTurma(d1, new[] { HoraAula.N, HoraAula.P },
-                                       new[] { DayOfWeek.Monday, DayOfWeek.Wednesday, DayOfWeek.Friday });
+                                       new[] { DiaDaSemana.Monday, DiaDaSemana.Wednesday, DiaDaSemana.Friday });
 
             Turma turmaD6 = CriarTurma(d2, new[] { HoraAula.L, HoraAula.M },
-                                       new[] { DayOfWeek.Tuesday, DayOfWeek.Thursday });
+                                       new[] { DiaDaSemana.Tuesday, DiaDaSemana.Thursday });
 
             TurmaHorario horario = new TurmaHorario()
                 {
-                    DiaSemana = DayOfWeek.Friday,
+                    DiaSemana = DiaDaSemana.Friday,
                     Horarios = new [] { HoraAula.J}
                 };
 
@@ -276,12 +276,12 @@ namespace AcadOracle.UnitTests
             int semestreAtual = 1;
             
             Turma turmaD1 = CriarTurma(d1, new [] { HoraAula.J, HoraAula.K },
-                                       new[] { DayOfWeek.Monday, DayOfWeek.Wednesday, DayOfWeek.Friday });
+                                       new[] { DiaDaSemana.Monday, DiaDaSemana.Wednesday, DiaDaSemana.Friday });
             Turma turmaD2 = CriarTurma(d2, new [] { HoraAula.J, HoraAula.K },
-                                       new[] { DayOfWeek.Tuesday, DayOfWeek.Thursday });
+                                       new[] { DiaDaSemana.Tuesday, DiaDaSemana.Thursday });
 
             Turma turmaD4 = CriarTurma(d4, new [] { HoraAula.J, HoraAula.K },
-                                       new[] { DayOfWeek.Monday, DayOfWeek.Wednesday });
+                                       new[] { DiaDaSemana.Monday, DiaDaSemana.Wednesday });
 
             RestricaoCreditos restricao1 = new RestricaoCreditos(8);
 
@@ -357,12 +357,12 @@ namespace AcadOracle.UnitTests
             int semestreAtual = 1;
             
             Turma turmaD1 = CriarTurma(d1, new [] { HoraAula.J, HoraAula.K },
-                                       new DayOfWeek[] { DayOfWeek.Monday, DayOfWeek.Wednesday, DayOfWeek.Friday });
+                                       new DiaDaSemana[] { DiaDaSemana.Monday, DiaDaSemana.Wednesday, DiaDaSemana.Friday });
             Turma turmaD2 = CriarTurma(d2, new [] { HoraAula.J, HoraAula.K },
-                                       new DayOfWeek[] { DayOfWeek.Tuesday, DayOfWeek.Thursday });
+                                       new DiaDaSemana[] { DiaDaSemana.Tuesday, DiaDaSemana.Thursday });
 
             Turma turmaD4 = CriarTurma(d4, new [] { HoraAula.J, HoraAula.K },
-                                       new DayOfWeek[] { DayOfWeek.Monday, DayOfWeek.Wednesday });
+                                       new DiaDaSemana[] { DiaDaSemana.Monday, DiaDaSemana.Wednesday });
 
             RestricaoDisciplinas restricao1 = new RestricaoDisciplinas(new Disciplina[] {d1});
 

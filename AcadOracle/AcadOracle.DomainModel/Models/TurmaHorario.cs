@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace AcadOracle.DomainModel.Models
 {
-    public partial class TurmaHorario
+    public class TurmaHorario : IEquatable<TurmaHorario>
     {
         private string horario;
         private IEnumerable<HoraAula> horarios; 
@@ -14,9 +14,7 @@ namespace AcadOracle.DomainModel.Models
             horarios = new HoraAula[0];
         }
 
-        public int Id { get; set; }
-        public int TurmaId { get; set; }
-        public DayOfWeek DiaSemana { get; set; }
+        public DiaDaSemana DiaSemana { get; set; }
         public string Horario {
             get { return string.Concat(horarios.Select(h => h.ToString())); }
             set
@@ -25,7 +23,6 @@ namespace AcadOracle.DomainModel.Models
                 Horarios = horario.ToHoraAula();
             }
         }
-        public virtual Turma Turma { get; set; }
 
         public IEnumerable<HoraAula> Horarios
         {
@@ -45,6 +42,38 @@ namespace AcadOracle.DomainModel.Models
             }
 
             return false;
+        }
+
+        public bool Equals(TurmaHorario other)
+        {
+            if (other == null)
+                return false;
+
+            return this.DiaSemana == other.DiaSemana && this.Horarios.All(h => other.Horarios.Contains(h));
+        }
+
+        public override bool Equals(object obj)
+        {
+            TurmaHorario turmaHorario = obj as TurmaHorario;
+            if (turmaHorario == null)
+                return false;
+
+            return this.DiaSemana == turmaHorario.DiaSemana && this.Horarios.All(h => turmaHorario.Horarios.Contains(h));
+        }
+    }
+
+    public class TurmaHorarioEqualityComparer : IEqualityComparer<TurmaHorario>
+    {
+        public bool Equals(TurmaHorario x, TurmaHorario y)
+        {
+            return x != null && y != null &&
+                x.DiaSemana == y.DiaSemana && 
+                x.Horarios.All(h => y.Horarios.Contains(h));
+        }
+
+        public int GetHashCode(TurmaHorario obj)
+        {
+            return ((int)obj.DiaSemana) ^ obj.Horarios.Sum(h => (int)h);
         }
     }
 }

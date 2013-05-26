@@ -40,5 +40,10 @@ namespace AcadOracle.DomainModel.Models
                 return points;
             }
         }
+
+        public override string ToString()
+        {
+            return Nome;
+        }
     }
 }

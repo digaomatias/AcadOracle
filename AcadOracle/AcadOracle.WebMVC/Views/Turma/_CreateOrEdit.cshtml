@@ -3,7 +3,7 @@
 @* This partial view defines form fields that will appear when creating and editing entities *@
 
 <div class="editor-label">
-    @Html.LabelFor(model => model.NomeTurma)
+    @Html.LabelFor(model => model.Numero)
 </div>
 <div class="editor-field">
     @Html.EditorFor(model => model.Numero)
@@ -11,7 +11,7 @@
 </div>
 
 <div class="editor-label">
-    Disciplina
+    @Html.LabelFor(model => model.Disciplina.Nome)
 </div>
 <div class="editor-field">
     @Html.DropDownListFor(model => model.DisciplinaId, ((IEnumerable<AcadOracle.DomainModel.Models.Disciplina>)ViewBag.PossibleDisciplinas).Select(option => new SelectListItem {
@@ -22,6 +22,10 @@
     @Html.ValidationMessageFor(model => model.DisciplinaId)
 </div>
 
+<div class="editor-label">
+    @Html.LabelFor(model => model.TurmaHorario)
+</div>
 <div class="editor-field">
-    @Html.ListBoxFor()
+    @Html.EditorFor(model => model.TurmaHorario)
+    @Html.ValidationMessageFor(model => model.TurmaHorario)
 </div>

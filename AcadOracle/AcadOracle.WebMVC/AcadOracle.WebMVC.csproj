@@ -184,7 +184,6 @@
     <Compile Include="Controllers\DisciplinaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TurmaController.cs" />
-    <Compile Include="Controllers\TurmaHorarioController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -194,7 +193,6 @@
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Extensions\MvcExtensions.cs" />
     <Compile Include="Models\TurmaEditModel.cs" />
-    <Compile Include="Models\TurmaHorarioEditModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -326,13 +324,6 @@
     <Content Include="Views\Turma\Details.cshtml" />
     <Content Include="Views\Turma\Index.cshtml" />
     <Content Include="Views\Turma\_CreateOrEdit.cshtml" />
-    <Content Include="Views\TurmaHorario\Create.cshtml" />
-    <Content Include="Views\TurmaHorario\Edit.cshtml" />
-    <Content Include="Views\TurmaHorario\Delete.cshtml" />
-    <Content Include="Views\TurmaHorario\Details.cshtml" />
-    <Content Include="Views\TurmaHorario\Index.cshtml" />
-    <Content Include="Views\TurmaHorario\_CreateOrEdit.cshtml" />
-    <Content Include="Views\TurmaHorario\_TurmaHorarioUC.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

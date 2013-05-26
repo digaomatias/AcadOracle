@@ -23,8 +23,8 @@ namespace AcadOracle.UnitTests
 
             IEnumerable<TurmaHorario> result = a.ToTurmaHorarios();
             Assert.IsTrue(result.Count() == 2);
-            Assert.IsTrue(result.First().DiaSemana == DayOfWeek.Monday);
-            Assert.IsTrue(result.ElementAt(1).DiaSemana == DayOfWeek.Wednesday);
+            Assert.IsTrue(result.First().DiaSemana == DiaDaSemana.Monday);
+            Assert.IsTrue(result.ElementAt(1).DiaSemana == DiaDaSemana.Wednesday);
         }
 
         [TestMethod]

@@ -15,8 +15,8 @@
     <div class="display-label">Disciplina</div>
     <div class="display-field">@Html.DisplayTextFor(_ => Model.Disciplina).ToString()</div>
 
-    <div class="display-label">TurmaHorarios</div>
-    <div class="display-field">@(Model.TurmaHorarios == null ? "None" : Model.TurmaHorarios.Count.ToString())</div>
+    <div class="display-label">Horario</div>
+    <div class="display-field">@(Model.TurmaHorario)</div>
 </fieldset>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |

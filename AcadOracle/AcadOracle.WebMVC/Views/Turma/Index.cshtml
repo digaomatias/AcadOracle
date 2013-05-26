@@ -19,7 +19,7 @@
             Disciplina
         </th>
         <th>
-            TurmaHorarios
+            Horarios
         </th>
     </tr>
 
@@ -37,7 +37,7 @@
 			@Html.DisplayTextFor(_ => item.Disciplina).ToString()
         </td>
         <td>
-			@(item.TurmaHorarios == null ? "None" : item.TurmaHorarios.Count.ToString())
+			@(item.TurmaHorario)
         </td>
     </tr>
 }
