@@ -42,6 +42,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Moo, Version=0.8.174.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Moo.0.8.0\lib\net40\Moo.dll</HintPath>
+    </Reference>
     <Reference Include="SimpleInjector">
       <HintPath>..\packages\SimpleInjector.2.2.3\lib\net40-client\SimpleInjector.dll</HintPath>
     </Reference>
@@ -188,6 +192,9 @@
     <Compile Include="Infrastructure\SimpleInjectorInitializer.cs" />
     <Compile Include="Infrastructure\SimpleInjectorWebApiDependencyResolver.cs" />
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\Extensions\MvcExtensions.cs" />
+    <Compile Include="Models\TurmaEditModel.cs" />
+    <Compile Include="Models\TurmaHorarioEditModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -325,6 +332,7 @@
     <Content Include="Views\TurmaHorario\Details.cshtml" />
     <Content Include="Views\TurmaHorario\Index.cshtml" />
     <Content Include="Views\TurmaHorario\_CreateOrEdit.cshtml" />
+    <Content Include="Views\TurmaHorario\_TurmaHorarioUC.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

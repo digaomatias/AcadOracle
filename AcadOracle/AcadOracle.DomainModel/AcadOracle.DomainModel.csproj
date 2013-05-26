@@ -52,10 +52,8 @@
     <Compile Include="Models\AcadOracleDBContext.cs" />
     <Compile Include="Models\Curso.cs" />
     <Compile Include="Models\Disciplina.cs" />
-    <Compile Include="Models\Horario.cs" />
     <Compile Include="Models\Mapping\CursoMap.cs" />
     <Compile Include="Models\Mapping\DisciplinaMap.cs" />
-    <Compile Include="Models\Mapping\HorarioMap.cs" />
     <Compile Include="Models\Mapping\TipoUsuarioMap.cs" />
     <Compile Include="Models\Mapping\TurmaHorarioMap.cs" />
     <Compile Include="Models\Mapping\TurmaMap.cs" />

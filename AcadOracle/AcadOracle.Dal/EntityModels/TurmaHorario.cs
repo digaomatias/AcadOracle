@@ -14,16 +14,11 @@ namespace AcadOracle.Dal.EntityModels
     
     public partial class TurmaHorario
     {
-        public TurmaHorario()
-        {
-            this.Horario = new HashSet<Horario>();
-        }
-    
         public int Id { get; set; }
         public int TurmaId { get; set; }
         public int DiaSemana { get; set; }
+        public string Horario { get; set; }
     
         public virtual Turma Turma { get; set; }
-        public virtual ICollection<Horario> Horario { get; set; }
     }
 }

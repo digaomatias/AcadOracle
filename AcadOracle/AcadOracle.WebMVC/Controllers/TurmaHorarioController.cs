@@ -15,11 +15,7 @@ namespace AcadOracle.WebMVC.Controllers
 		private readonly ITurmaRepository turmaRepository;
 		private readonly ITurmaHorarioRepository turmahorarioRepository;
 
-		// If you are using Dependency Injection, you can delete the following constructor
-        private TurmaHorarioController() : this(new TurmaRepository(), new TurmaHorarioRepository())
-        {
-        }
-
+		
         public TurmaHorarioController(ITurmaRepository turmaRepository, ITurmaHorarioRepository turmahorarioRepository)
         {
 			this.turmaRepository = turmaRepository;
@@ -31,7 +27,7 @@ namespace AcadOracle.WebMVC.Controllers
 
         public ViewResult Index()
         {
-            return View(turmahorarioRepository.AllIncluding(turmahorario => turmahorario.Turma, turmahorario => turmahorario.Horarios));
+            return View(turmahorarioRepository.AllIncluding(turmahorario => turmahorario.Turma));
         }
 
         //

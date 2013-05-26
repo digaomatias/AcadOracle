@@ -53,8 +53,6 @@
     <Compile Include="Interfaces\IOracleService.cs" />
     <Compile Include="Interfaces\IUser.cs" />
     <Compile Include="OracleService.cs" />
-    <Compile Include="ViewModels\UserEditModel.cs" />
-    <Compile Include="ViewModels\UserViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

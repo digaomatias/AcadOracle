@@ -16,6 +16,9 @@
             DiaSemana
         </th>
         <th>
+            Horario
+        </th>
+        <th>
             Turma
         </th>
         <th>
@@ -34,10 +37,13 @@
 			@Html.DisplayTextFor(_ => item.DiaSemana).ToString()
         </td>
         <td>
+			@item.Horario
+        </td>
+        <td>
 			@Html.DisplayTextFor(_ => item.Turma).ToString()
         </td>
         <td>
-			@(item.Horarios == null ? "None" : item.Horarios.Count.ToString())
+			@Html.DisplayTextFor(_ => item.Horarios).ToString()
         </td>
     </tr>
 }

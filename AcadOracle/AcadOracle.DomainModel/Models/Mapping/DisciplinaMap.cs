@@ -11,9 +11,6 @@ namespace AcadOracle.DomainModel.Models.Mapping
             this.HasKey(t => t.Id);
 
             // Properties
-            this.Property(t => t.Id)
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-
             this.Property(t => t.Nome)
                 .IsRequired()
                 .HasMaxLength(255);

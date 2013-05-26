@@ -11,14 +11,16 @@ namespace AcadOracle.DomainModel.Models.Mapping
             this.HasKey(t => t.Id);
 
             // Properties
-            this.Property(t => t.Id)
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            this.Property(t => t.Horario)
+                .IsRequired()
+                .HasMaxLength(15);
 
             // Table & Column Mappings
             this.ToTable("TurmaHorario");
             this.Property(t => t.Id).HasColumnName("Id");
             this.Property(t => t.TurmaId).HasColumnName("TurmaId");
             this.Property(t => t.DiaSemana).HasColumnName("DiaSemana");
+            this.Property(t => t.Horario).HasColumnName("Horario");
 
             // Relationships
             this.HasRequired(t => t.Turma)

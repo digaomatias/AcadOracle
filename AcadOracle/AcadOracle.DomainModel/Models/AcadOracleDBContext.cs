@@ -18,7 +18,6 @@ namespace AcadOracle.DomainModel.Models
 
         public DbSet<Curso> Cursos { get; set; }
         public DbSet<Disciplina> Disciplinas { get; set; }
-        public DbSet<Horario> Horarios { get; set; }
         public DbSet<TipoUsuario> TipoUsuarios { get; set; }
         public DbSet<Turma> Turmas { get; set; }
         public DbSet<TurmaHorario> TurmaHorarios { get; set; }
@@ -28,7 +27,6 @@ namespace AcadOracle.DomainModel.Models
         {
             modelBuilder.Configurations.Add(new CursoMap());
             modelBuilder.Configurations.Add(new DisciplinaMap());
-            modelBuilder.Configurations.Add(new HorarioMap());
             modelBuilder.Configurations.Add(new TipoUsuarioMap());
             modelBuilder.Configurations.Add(new TurmaMap());
             modelBuilder.Configurations.Add(new TurmaHorarioMap());

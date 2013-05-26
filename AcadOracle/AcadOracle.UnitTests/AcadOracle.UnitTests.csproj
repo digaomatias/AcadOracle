@@ -67,6 +67,7 @@
     <Compile Include="OracleServiceTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestHelpers\TestExtensions.cs" />
+    <Compile Include="ModelExtensionsTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

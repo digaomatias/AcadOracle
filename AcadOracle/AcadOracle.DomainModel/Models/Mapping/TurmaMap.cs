@@ -11,9 +11,6 @@ namespace AcadOracle.DomainModel.Models.Mapping
             this.HasKey(t => t.Id);
 
             // Properties
-            this.Property(t => t.Id)
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-
             // Table & Column Mappings
             this.ToTable("Turma");
             this.Property(t => t.Id).HasColumnName("Id");

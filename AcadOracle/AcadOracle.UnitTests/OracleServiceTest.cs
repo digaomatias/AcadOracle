@@ -6,7 +6,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using AcadOracle.Common;
 using AcadOracle.Core;
-using AcadOracle.Core.Models;
+using AcadOracle.Dal.EntityModels;
 using AcadOracle.Dal.Interfaces;
 using AcadOracle.DomainModel;
 using AcadOracle.DomainModel.Models;
@@ -14,13 +14,16 @@ using AcadOracle.DomainModel.Restricao;
 using AcadOracle.UnitTests.TestHelpers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using Disciplina = AcadOracle.DomainModel.Models.Disciplina;
+using Turma = AcadOracle.DomainModel.Models.Turma;
+using TurmaHorario = AcadOracle.DomainModel.Models.TurmaHorario;
 
 namespace AcadOracle.UnitTests
 {
     [TestClass]
     public class OracleServiceTest
     {
-        private Turma CriarTurma(Disciplina disc, Horario[] horas, DayOfWeek[] dias )
+        private Turma CriarTurma(Disciplina disc, HoraAula[] horas, DayOfWeek[] dias )
         {
             HashSet<TurmaHorario> horarios = new HashSet<TurmaHorario>();
             foreach (var dia in dias)
@@ -96,16 +99,13 @@ namespace AcadOracle.UnitTests
             List<Disciplina> pendentes = new List<Disciplina>(new Disciplina[] {d1, d2});
             List<Disciplina> cursadas = new List<Disciplina>(new Disciplina[] { });
             int semestreAtual = 1;
-
-            Horario horJ = new Horario() { Id = HoraAula.J };
-            Horario horK = new Horario() { Id = HoraAula.K };
-
-            Turma turmaD1 = CriarTurma(d1, new[] {horJ, horK},
+            
+            Turma turmaD1 = CriarTurma(d1, new[] {HoraAula.J, HoraAula.K, },
                                        new[] {DayOfWeek.Monday, DayOfWeek.Wednesday, DayOfWeek.Friday});
-            Turma turmaD2 = CriarTurma(d2, new [] { horJ, horK },
+            Turma turmaD2 = CriarTurma(d2, new [] { HoraAula.J, HoraAula.K },
                                        new[] { DayOfWeek.Tuesday, DayOfWeek.Thursday });
           
-            Turma turmaD4 = CriarTurma(d4, new [] { horJ, horK },
+            Turma turmaD4 = CriarTurma(d4, new [] { HoraAula.J, HoraAula.K },
                                        new[] { DayOfWeek.Monday, DayOfWeek.Wednesday });
             #endregion
 
@@ -178,32 +178,25 @@ namespace AcadOracle.UnitTests
             List<Disciplina> pendentes = new List<Disciplina>(new Disciplina[] { d1, d2 });
             List<Disciplina> cursadas = new List<Disciplina>(new Disciplina[] { });
             int semestreAtual = 1;
-
-            Horario horJ = new Horario() {Id = HoraAula.J};
-            Horario horK = new Horario() { Id = HoraAula.K };
-            Horario horL = new Horario() { Id = HoraAula.L };
-            Horario horM = new Horario() { Id = HoraAula.M };
-            Horario horN = new Horario() { Id = HoraAula.N };
-            Horario horP = new Horario() { Id = HoraAula.P };
-
-            Turma turmaD1 = CriarTurma(d1, new [] { horJ, horK },
+            
+            Turma turmaD1 = CriarTurma(d1, new [] { HoraAula.J, HoraAula.K },
                                        new [] { DayOfWeek.Monday, DayOfWeek.Wednesday, DayOfWeek.Friday });
-            Turma turmaD2 = CriarTurma(d2, new [] { horJ, horK },
+            Turma turmaD2 = CriarTurma(d2, new [] { HoraAula.J, HoraAula.K },
                                        new [] { DayOfWeek.Tuesday, DayOfWeek.Thursday });
 
-            Turma turmaD4 = CriarTurma(d4, new[] { horJ, horK },
+            Turma turmaD4 = CriarTurma(d4, new[] { HoraAula.J, HoraAula.K },
                                        new [] { DayOfWeek.Monday, DayOfWeek.Wednesday });
 
-            Turma turmaD5 = CriarTurma(d1, new[] { horN, horP },
+            Turma turmaD5 = CriarTurma(d1, new[] { HoraAula.N, HoraAula.P },
                                        new[] { DayOfWeek.Monday, DayOfWeek.Wednesday, DayOfWeek.Friday });
 
-            Turma turmaD6 = CriarTurma(d2, new[] { horL, horM },
+            Turma turmaD6 = CriarTurma(d2, new[] { HoraAula.L, HoraAula.M },
                                        new[] { DayOfWeek.Tuesday, DayOfWeek.Thursday });
 
             TurmaHorario horario = new TurmaHorario()
                 {
                     DiaSemana = DayOfWeek.Friday,
-                    Horarios = new [] {new Horario(){Id = HoraAula.J}}
+                    Horarios = new [] { HoraAula.J}
                 };
 
             RestricaoHorarios restricao1 = new RestricaoHorarios(new[] { horario });
@@ -281,16 +274,13 @@ namespace AcadOracle.UnitTests
             List<Disciplina> pendentes = new List<Disciplina>(new Disciplina[] { d1, d2 });
             List<Disciplina> cursadas = new List<Disciplina>(new Disciplina[] { });
             int semestreAtual = 1;
-
-            Horario horJ = new Horario() { Id = HoraAula.J };
-            Horario horK = new Horario() { Id = HoraAula.K };
-
-            Turma turmaD1 = CriarTurma(d1, new [] { horJ, horK },
+            
+            Turma turmaD1 = CriarTurma(d1, new [] { HoraAula.J, HoraAula.K },
                                        new[] { DayOfWeek.Monday, DayOfWeek.Wednesday, DayOfWeek.Friday });
-            Turma turmaD2 = CriarTurma(d2, new [] { horJ, horK },
+            Turma turmaD2 = CriarTurma(d2, new [] { HoraAula.J, HoraAula.K },
                                        new[] { DayOfWeek.Tuesday, DayOfWeek.Thursday });
 
-            Turma turmaD4 = CriarTurma(d4, new [] { horJ, horK },
+            Turma turmaD4 = CriarTurma(d4, new [] { HoraAula.J, HoraAula.K },
                                        new[] { DayOfWeek.Monday, DayOfWeek.Wednesday });
 
             RestricaoCreditos restricao1 = new RestricaoCreditos(8);
@@ -365,16 +355,13 @@ namespace AcadOracle.UnitTests
             List<Disciplina> pendentes = new List<Disciplina>(new Disciplina[] { d1, d2 });
             List<Disciplina> cursadas = new List<Disciplina>(new Disciplina[] { });
             int semestreAtual = 1;
-
-            Horario horJ = new Horario() { Id = HoraAula.J };
-            Horario horK = new Horario() { Id = HoraAula.K };
-
-            Turma turmaD1 = CriarTurma(d1, new [] { horJ, horK },
+            
+            Turma turmaD1 = CriarTurma(d1, new [] { HoraAula.J, HoraAula.K },
                                        new DayOfWeek[] { DayOfWeek.Monday, DayOfWeek.Wednesday, DayOfWeek.Friday });
-            Turma turmaD2 = CriarTurma(d2, new [] { horJ, horK },
+            Turma turmaD2 = CriarTurma(d2, new [] { HoraAula.J, HoraAula.K },
                                        new DayOfWeek[] { DayOfWeek.Tuesday, DayOfWeek.Thursday });
 
-            Turma turmaD4 = CriarTurma(d4, new [] { horJ, horK },
+            Turma turmaD4 = CriarTurma(d4, new [] { HoraAula.J, HoraAula.K },
                                        new DayOfWeek[] { DayOfWeek.Monday, DayOfWeek.Wednesday });
 
             RestricaoDisciplinas restricao1 = new RestricaoDisciplinas(new Disciplina[] {d1});

@@ -27,7 +27,6 @@ namespace AcadOracle.Dal.EntityModels
     
         public DbSet<Curso> Curso { get; set; }
         public DbSet<Disciplina> Disciplina { get; set; }
-        public DbSet<Horario> Horario { get; set; }
         public DbSet<TipoUsuario> TipoUsuario { get; set; }
         public DbSet<Turma> Turma { get; set; }
         public DbSet<TurmaHorario> TurmaHorario { get; set; }

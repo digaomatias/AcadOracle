@@ -7,6 +7,7 @@ using AcadOracle.Dal;
 using AcadOracle.Dal.Interfaces;
 using AcadOracle.DomainModel.Models;
 using AcadOracle.WebMVC.Models;
+using Moo;
 
 namespace AcadOracle.WebMVC.Controllers
 {   
@@ -51,10 +52,13 @@ namespace AcadOracle.WebMVC.Controllers
         // POST: /Turma/Create
 
         [HttpPost]
-        public ActionResult Create(Turma turma)
+        public ActionResult Create(TurmaEditModel turma)
         {
-            if (ModelState.IsValid) {
-                turmaRepository.InsertOrUpdate(turma);
+            if (ModelState.IsValid)
+            {
+                var result = turma.MapTo<Turma>();
+
+                turmaRepository.InsertOrUpdate(result);
                 turmaRepository.Save();
                 return RedirectToAction("Index");
             } else {

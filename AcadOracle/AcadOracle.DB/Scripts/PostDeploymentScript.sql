@@ -10,40 +10,6 @@ Post-Deployment Script Template
 --------------------------------------------------------------------------------------
 */
 
---Adiciona os horários
-DELETE FROM Horario;
-
-INSERT INTO Horario (Id, Descricao)
-VALUES (1, 'A');
-INSERT INTO Horario (Id, Descricao)
-VALUES (2, 'B');
-INSERT INTO Horario (Id, Descricao)
-VALUES (3, 'C');
-INSERT INTO Horario (Id, Descricao)
-VALUES (4, 'D');
-INSERT INTO Horario (Id, Descricao)
-VALUES (5, 'E');
-INSERT INTO Horario (Id, Descricao)
-VALUES (6, 'F');
-INSERT INTO Horario (Id, Descricao)
-VALUES (7, 'G');
-INSERT INTO Horario (Id, Descricao)
-VALUES (8, 'H');
-INSERT INTO Horario (Id, Descricao)
-VALUES (9, 'I');
-INSERT INTO Horario (Id, Descricao)
-VALUES (10, 'J');
-INSERT INTO Horario (Id, Descricao)
-VALUES (11, 'K');
-INSERT INTO Horario (Id, Descricao)
-VALUES (12, 'L');
-INSERT INTO Horario (Id, Descricao)
-VALUES (13, 'M');
-INSERT INTO Horario (Id, Descricao)
-VALUES (14, 'N');
-INSERT INTO Horario (Id, Descricao)
-VALUES (15, 'P');
-
 GO
 
 --Adiciona o curso de CC

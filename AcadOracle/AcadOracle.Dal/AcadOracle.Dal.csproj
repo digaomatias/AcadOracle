@@ -60,9 +60,6 @@
     <Compile Include="EntityModels\Disciplina.cs">
       <DependentUpon>OracleDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="EntityModels\Horario.cs">
-      <DependentUpon>OracleDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="EntityModels\OracleDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
