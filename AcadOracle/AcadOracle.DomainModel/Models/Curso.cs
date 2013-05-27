@@ -13,5 +13,10 @@ namespace AcadOracle.DomainModel.Models
         public int Id { get; set; }
         public string Nome { get; set; }
         public virtual ICollection<Disciplina> Disciplinas { get; set; }
+
+        public override string ToString()
+        {
+            return Nome;
+        }
     }
 }

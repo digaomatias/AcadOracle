@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 11.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/ReverseEngineeringLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2013-05-27T00:56:32" Importance="High" Text="Reverse Engineering Started." />
+  <Message Timestamp="2013-05-27T00:56:34" Importance="Diagnostic" Text="Element reverse engineered into the UML model: '83722a66-faf2-4975-80d7-0f7a709c3641' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2013-05-27T00:56:34" Importance="Diagnostic" Text="Element reverse engineered into the UML model: '8e597128-8084-4132-8395-c8df393477c9' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2013-05-27T00:56:34" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'AcadOracleModeling::AcadOracle' -  (Package)" />
+  <Message Timestamp="2013-05-27T00:56:34" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'AcadOracleModeling::AcadOracle::Dal' -  (Package)" />
+  <Message Timestamp="2013-05-27T00:56:34" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'AcadOracleModeling::AcadOracle::Dal::Interfaces' -  (Package)" />
+  <Message Timestamp="2013-05-27T00:56:34" Importance="Medium" Text="Element reverse engineered into the UML model: 'AcadOracleModeling::AcadOracle::Dal::Interfaces::IRepository' -  (Interface)" />
+  <Message Timestamp="2013-05-27T00:56:34" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'AcadOracleModeling::AcadOracle::Dal::Interfaces::IRepository::All' -  (Property)" />
+  <Message Timestamp="2013-05-27T00:56:34" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'AcadOracleModeling::AcadOracle::Dal::Interfaces::IRepository::AllIncluding' -  (Operation)" />
+  <Message Timestamp="2013-05-27T00:56:34" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'AcadOracleModeling::AcadOracle::Dal::Interfaces::IRepository::AllIncluding::includeProperties' -  (Parameter)" />
+  <Message Timestamp="2013-05-27T00:56:34" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'AcadOracleModeling::AcadOracle::Dal::Interfaces::IRepository::Delete' -  (Operation)" />
+  <Message Timestamp="2013-05-27T00:56:34" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'AcadOracleModeling::AcadOracle::Dal::Interfaces::IRepository::Delete::id' -  (Parameter)" />
+  <Message Timestamp="2013-05-27T00:56:34" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'AcadOracleModeling::AcadOracle::Dal::Interfaces::IRepository::Find' -  (Operation)" />
+  <Message Timestamp="2013-05-27T00:56:34" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'AcadOracleModeling::AcadOracle::Dal::Interfaces::IRepository::Find::id' -  (Parameter)" />
+  <Message Timestamp="2013-05-27T00:56:34" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'AcadOracleModeling::AcadOracle::Dal::Interfaces::IRepository::InsertOrUpdate' -  (Operation)" />
+  <Message Timestamp="2013-05-27T00:56:34" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'AcadOracleModeling::AcadOracle::Dal::Interfaces::IRepository::InsertOrUpdate::disciplina' -  (Parameter)" />
+  <Message Timestamp="2013-05-27T00:56:34" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'AcadOracleModeling::AcadOracle::Dal::Interfaces::IRepository::Save' -  (Operation)" />
+  <Message Timestamp="2013-05-27T00:56:34" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'AcadOracleModeling::System' -  (Package)" />
+  <Message Timestamp="2013-05-27T00:56:34" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'AcadOracleModeling::System::IDisposable' -  (Interface)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2013-05-27T00:56:34" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'AcadOracleModeling::System::Linq' -  (Package)" />
+  <Message Timestamp="2013-05-27T00:56:34" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'AcadOracleModeling::System::Linq::Expressions' -  (Package)" />
+  <Message Timestamp="2013-05-27T00:56:34" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'AcadOracleModeling::System::Linq::Expressions::Expression' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2013-05-27T00:56:34" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'AcadOracleModeling::System::Linq::IQueryable' -  (Interface)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2013-05-27T00:56:34" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'AcadOracleModeling::System::Linq::IQueryable&lt;T‎&gt;' -  (Interface)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2013-05-27T00:56:34" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Integer' -  (PrimitiveType)" />
+  <Message Timestamp="2013-05-27T00:56:34" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: AcadOracleModeling::AcadOracle::Dal::Interfaces::IRepository to AcadOracleModeling::System::Linq::IQueryable&lt;T‎&gt; (Association)" />
+  <Message Timestamp="2013-05-27T00:56:34" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: AcadOracleModeling::AcadOracle::Dal::Interfaces::IRepository to AcadOracleModeling::System::IDisposable (Generalization)" />
+  <Message Timestamp="2013-05-27T00:56:34" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: AcadOracleModeling::AcadOracle::Dal::Interfaces::ITurmaRepository to AcadOracleModeling::AcadOracle::Dal::Interfaces::IRepository (Generalization)" />
+  <Message Timestamp="2013-05-27T00:56:34" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: AcadOracleModeling::AcadOracle::Dal::Interfaces::IDisciplinaRepository to AcadOracleModeling::AcadOracle::Dal::Interfaces::IRepository (Generalization)" />
+  <Message Timestamp="2013-05-27T00:56:34" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: AcadOracleModeling::AcadOracle::Dal::Interfaces::ICursoRepository to AcadOracleModeling::AcadOracle::Dal::Interfaces::IRepository (Generalization)" />
+  <Message Timestamp="2013-05-27T00:56:34" Importance="High" Text="(1) type(s) fully reverse engineered." />
+  <Message Timestamp="2013-05-27T00:56:34" Importance="High" Text="(4) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
+  <Message Timestamp="2013-05-27T00:56:34" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
+</Log>

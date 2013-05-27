@@ -4,12 +4,12 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="9a4fe72afe6d41f7b1b6ec36820d298e" Name="Diagram1" ZoomLevel="77">
+      <Diagram DiagramId="9a4fe72afe6d41f7b1b6ec36820d298e" Name="Diagram1" ZoomLevel="87">
         <EntityTypeShape EntityType="AcadOracleDBModel.Curso" Width="1.5" PointX="2.75" PointY="19.125" />
         <EntityTypeShape EntityType="AcadOracleDBModel.Disciplina" Width="1.5" PointX="2.625" PointY="21.75" />
-        <EntityTypeShape EntityType="AcadOracleDBModel.TipoUsuario" Width="1.5" PointX="5.75" PointY="19" />
+        <EntityTypeShape EntityType="AcadOracleDBModel.TipoUsuario" Width="1.5" PointX="4.875" PointY="19.125" />
         <EntityTypeShape EntityType="AcadOracleDBModel.Turma" Width="1.5" PointX="5.75" PointY="21.375" />
-        <EntityTypeShape EntityType="AcadOracleDBModel.Usuario" Width="1.5" PointX="9.25" PointY="18.875" />
+        <EntityTypeShape EntityType="AcadOracleDBModel.Usuario" Width="1.5" PointX="8.25" PointY="19.125" />
         <AssociationConnector Association="AcadOracleDBModel.FK_Turma_Disciplina" />
         <AssociationConnector Association="AcadOracleDBModel.FK_Usuario_TipoUsuario" />
         <AssociationConnector Association="AcadOracleDBModel.CursoDisciplina" />

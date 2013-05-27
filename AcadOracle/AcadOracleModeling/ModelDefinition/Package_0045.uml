@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="2a53d0e6-6552-4723-8996-7359314a7dd9"
+  name="AcadOracle"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="6a731dd8-786b-4f82-971f-eb2960717f70"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DAcadOracle"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="f116f35e-82e9-478c-8805-9c0456a241e0"
+        LastKnownName="Dal"
+        LastKnownLocation="Package1_0045.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="d8e890ec-0cf8-49dd-9037-d4a684daba94"
+        LastKnownName="DomainModel"
+        LastKnownLocation="Package2_0054.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

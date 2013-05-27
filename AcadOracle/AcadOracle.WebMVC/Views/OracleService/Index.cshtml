@@ -1,0 +1,52 @@
+﻿@model AcadOracle.WebMVC.Models.RequisicaoSugestaoModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Sugestão de Disciplinas</h2>
+
+<div class="editor-label">
+    <b>Selecione o curso:</b>
+</div>
+<div class="editor-field">
+    @Html.DropDownList("ddlCursos", (SelectList)ViewBag.CursoList)
+</div>
+
+<div class="sugestao_data">
+    
+    <div class="editor-label">
+        Disciplinas
+    </div>
+
+    <div class="editor-field">
+            Aqui, adicionar as disciplinas com opção de marcar as cursadas e ir habilitando as que podem ser cursadas.
+    </div>
+    
+    <div class="editor-label">
+        @Html.LabelFor(m => m.RestricaoCreditos, "Máximo de créditos:")
+    </div>
+
+    <div class="editor-field">
+        @Html.TextBoxFor(m => m.RestricaoCreditos, new { title = "o default é 24, caso esse campo fique vazio."})    
+    </div>
+    
+    <div class="editor-label">
+        @Html.LabelFor(m => m.RestricaoHorarios, "Horários que não desejo cursar:")
+    </div>
+
+    <div class="editor-field">
+         @Html.TextBoxFor(m => m.RestricaoHorarios, new { title = "No formato 2jk (segunda jk), 5lm(quinta lm), etc..."})    
+    </div>
+    
+    <div class="editor-label">
+        
+    </div>
+
+    <div class="editor-field">
+            
+    </div>
+
+
+</div>

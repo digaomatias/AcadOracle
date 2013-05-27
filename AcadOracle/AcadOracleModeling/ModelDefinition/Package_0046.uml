@@ -1,0 +1,880 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="b88a5284-3b8d-4449-8c36-4227ee077dc5"
+  name="Interfaces"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="d146b65e-27f1-4a50-a317-33f40627faae"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DAcadOracle.Dal.Interfaces"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="ad88118f-2dc5-4cfe-80cd-48bb5b018fec"
+        name="ICursoRepository"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="eae4086e-73a3-47a3-8d35-33fae9a41ddb"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRodrigo%2FDropbox%2FAula%2F2013I%2FSoftDev%2FAconselhador%2FAcadOracle%2FAcadOracle.Dal%2Fbin%2FDebug%2FAcadOracle.Dal.dll Namespace%3DAcadOracle.Dal.Interfaces Type%3DICursoRepository"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="1e518020-6469-45c7-96d2-b1bb2f1e04d8"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d0885bb9-4545-47bd-b3d3-12bdda867c24">
+                <propertyInstance
+                  Id="ea0f300c-7444-4004-b188-f7654aa9eeac"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f6bd8f07-ce1d-4709-96d7-5e050e1431a4">
+                <propertyInstance
+                  Id="3dee2942-53ca-4353-bb84-25616dedd2d5"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ecc2232e-20db-46ef-b2aa-f01eb582f46f">
+                <propertyInstance
+                  Id="6e70d135-3913-4fec-924f-3ae336c8facd"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7c806382-3114-4a1d-b481-919fdc120a40">
+                <propertyInstance
+                  Id="f33de8e1-8eea-46a8-b1d0-805adb554a3c"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="18d0637a-46c6-4ee0-b594-3f97b0e3bc3a"
+            isSubstitutable="false">
+            <interfaceMoniker
+              Id="dfbb1366-d205-4a89-ad07-546cffb6682a"
+              LastKnownName="IRepository"
+              LastKnownLocation="Package_0046.uml" />
+          </generalization>
+        </generalsInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="6d7896a8-4f95-4906-a5f0-c1a50da2647e"
+        name="ITurmaRepository"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="de9f3165-f24a-41e9-b333-27ee36def499"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRodrigo%2FDropbox%2FAula%2F2013I%2FSoftDev%2FAconselhador%2FAcadOracle%2FAcadOracle.Dal%2Fbin%2FDebug%2FAcadOracle.Dal.dll Namespace%3DAcadOracle.Dal.Interfaces Type%3DITurmaRepository"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="16024c5d-542d-4e26-b212-16e162c0b0dc"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5537f255-70af-4f4d-859a-3ae9219f3aa3">
+                <propertyInstance
+                  Id="fcf85ef6-8b50-4d67-988b-d0d5d0c0b670"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="78bdd33d-318d-40bb-8df3-823ce75aaaa3">
+                <propertyInstance
+                  Id="dc7f1d74-614c-435c-a646-696c9d29ce28"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4f5819d2-094a-42b8-a099-d626f6b92390">
+                <propertyInstance
+                  Id="e468605e-4802-4a38-ae1f-9fa55085a19e"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c3c61719-975f-4658-b547-0949e260ca91">
+                <propertyInstance
+                  Id="78a19d6c-769b-449a-b7dd-1cfdb046d879"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="54e18f56-070b-4bf7-b44c-94c86e5d56b0"
+            isSubstitutable="false">
+            <interfaceMoniker
+              Id="dfbb1366-d205-4a89-ad07-546cffb6682a"
+              LastKnownName="IRepository"
+              LastKnownLocation="Package_0046.uml" />
+          </generalization>
+        </generalsInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="ad0bcfba-abdc-4f13-88e5-8c52642419de"
+        name="IDisciplinaRepository"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="f57d9c07-3891-429f-881a-2e8d7030dc62"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRodrigo%2FDropbox%2FAula%2F2013I%2FSoftDev%2FAconselhador%2FAcadOracle%2FAcadOracle.Dal%2Fbin%2FDebug%2FAcadOracle.Dal.dll Namespace%3DAcadOracle.Dal.Interfaces Type%3DIDisciplinaRepository"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="d307927d-d26f-4b0a-a46d-2e8566f609dd"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e6b9eeba-43d0-4871-86ee-b22f3c9787c0">
+                <propertyInstance
+                  Id="b5de6796-69e5-453d-b01d-08223429e69c"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5cecbe3e-30dd-49a4-86d1-542307208030">
+                <propertyInstance
+                  Id="29d2290e-ef45-4378-96f9-cc25fdd61ff4"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b1300d7e-7608-42b4-9bd0-502eb3db4d6f">
+                <propertyInstance
+                  Id="0e0d6775-57d0-4836-b399-7a9075850466"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ffa9d6c6-c8d7-4e97-89c5-d59df43eb151">
+                <propertyInstance
+                  Id="751c749d-ce6b-47fe-b7c2-271b40eba896"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="0cc2ffce-024f-471d-88d8-5b54b298547d"
+            isSubstitutable="false">
+            <interfaceMoniker
+              Id="dfbb1366-d205-4a89-ad07-546cffb6682a"
+              LastKnownName="IRepository"
+              LastKnownLocation="Package_0046.uml" />
+          </generalization>
+        </generalsInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="dfbb1366-d205-4a89-ad07-546cffb6682a"
+        name="IRepository"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="45496b3e-5212-4c07-8d72-ecafa032d50b"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRodrigo%2FDropbox%2FAula%2F2013I%2FSoftDev%2FAconselhador%2FAcadOracle%2FAcadOracle.Dal%2Fbin%2FDebug%2FAcadOracle.Dal.dll Namespace%3DAcadOracle.Dal.Interfaces Type%3D(Name%3DIRepository GenericParameterCount%3D1)"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="01d1101c-3ab0-40f4-ab7c-df1de81f8bbd"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="40683d26-00ea-4d56-8fcf-23df7e4f5ca0">
+                <propertyInstance
+                  Id="d96cd739-3873-4c42-a283-33eaa42742a1"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f00f0e4e-c8de-434d-8135-a9f55ae50c1c">
+                <propertyInstance
+                  Id="0e2d5737-91d9-422f-a7ce-86400ed56c84"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8e9a2d13-137e-4702-b62e-8a414dc853a3">
+                <propertyInstance
+                  Id="c2f9e843-13b5-414c-8ed3-a5c06aae2270"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="deb443bf-ab32-4ae4-975e-c003b6ed1c3f">
+                <propertyInstance
+                  Id="b0e509a0-17c8-4445-84f3-25290b5d9557"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="4e5d4460-a914-4c94-9955-ea4571f2cf4b"
+            isSubstitutable="false">
+            <interfaceMoniker
+              Id="43054846-5060-4c1c-9564-d81dcd1545d4"
+              LastKnownName="IDisposable"
+              LastKnownLocation="Package_0054.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="746db0d2-cb4e-4784-a41e-1c28bd537d73"
+            isDerived="false"
+            sourceEndRoleName="IRepository"
+            targetEndRoleName="All"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="7f855e54-802b-4828-9509-a97cb0abc157"
+              LastKnownName="IQueryable&lt;T‎&gt;"
+              LastKnownLocation="Package1_0054.uml" />
+            <description>Property All references type IQueryable&lt;T‎&gt;.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e99900a6-c490-4800-ac25-eb614701f950"
+                  name="IRepository"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="7d9421e8-601f-47e1-b963-b96b43def1a5"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="6bcfd883-760f-451c-817b-6aff41593b25"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="604f2a3b-48b5-4e30-b745-08f5153d0d03"
+                  name="All"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="5fe66b7c-1850-4eca-b5ad-332371cea8e3"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="561c0042-d347-4267-a4d4-30072064362d"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature
+            Id="6c21156e-36a3-438f-8e51-e5d1ac8a8958"
+            parameters=""
+            name="RedefinableTemplateSignature1"
+            isLeaf="false">
+            <ownedParameters>
+              <classifierTemplateParameter
+                Id="83722a66-faf2-4975-80d7-0f7a709c3641">
+                <referencesInternal>
+                  <reference
+                    Id="1a43988f-4389-452a-b115-675ac6491158"
+                    handle="viewcode://./CodeSchema_GenericParameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRodrigo%2FDropbox%2FAula%2F2013I%2FSoftDev%2FAconselhador%2FAcadOracle%2FAcadOracle.Dal%2Fbin%2FDebug%2FAcadOracle.Dal.dll Namespace%3DAcadOracle.Dal.Interfaces Type%3D(Name%3DIRepository GenericParameterCount%3D1) ParameterIdentifier%3D0"
+                    tag="ViewCode" />
+                </referencesInternal>
+                <ownedParameterableElement>
+                  <class
+                    Id="12c8efdd-beb3-40e4-8fb8-507aa8f6d8e0"
+                    name="T"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+        <ownedAttributes>
+          <property
+            Id="7401200c-a9ca-4916-8515-dafb023a9e70"
+            name="All"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="474ab440-3333-41b3-b742-0b218704ac01"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRodrigo%2FDropbox%2FAula%2F2013I%2FSoftDev%2FAconselhador%2FAcadOracle%2FAcadOracle.Dal%2Fbin%2FDebug%2FAcadOracle.Dal.dll Namespace%3DAcadOracle.Dal.Interfaces Type%3D(Name%3DIRepository GenericParameterCount%3D1) Member%3DAll"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="99aabcab-7186-4bec-8b70-c3c8a4dbf0a5"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f84c12bb-72b6-4837-b5b1-443ddc61bef0">
+                    <propertyInstance
+                      Id="1ad50dc1-ca86-4bd1-ac84-8a80bdad9f75"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="468c1934-6c75-4129-9c67-bd7fa763d571">
+                    <propertyInstance
+                      Id="90f3a571-ea1d-4b49-b7fa-2b0ab99e607c"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3130525b-5af7-4387-b77e-541ea7e15ccb">
+                    <propertyInstance
+                      Id="06db09c6-0d7f-4c1b-89b6-9402f097bd31"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="455ecc0e-f848-40b2-9797-c87e7d72a115">
+                    <propertyInstance
+                      Id="5bbf04b8-3b5d-4202-a38a-02862600a419"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="074df06c-ffbd-4bd0-bb8e-60d1540af5a2">
+                    <propertyInstance
+                      Id="48cfa3b8-6912-496c-beb2-0bdae835e98f"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7d602f0d-83bf-458f-a8f2-8e991864cba8">
+                    <propertyInstance
+                      Id="4e9a9249-14f6-48b8-81c9-54d5c905bac7"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c87a1a4f-c9d6-49b3-a217-a7647e9e8b5a">
+                    <propertyInstance
+                      Id="7c14773e-d304-4ac8-9ca5-0da3355b43b0"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="7f855e54-802b-4828-9509-a97cb0abc157"
+                LastKnownName="IQueryable&lt;T‎&gt;"
+                LastKnownLocation="Package1_0054.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributes>
+        <ownedOperations>
+          <operation
+            Id="5dd3cb32-ebe8-4338-ae36-f06f8a4f1c5b"
+            name="AllIncluding"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="1858f9ef-7f51-42c6-860b-a7223a519aef"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRodrigo%2FDropbox%2FAula%2F2013I%2FSoftDev%2FAconselhador%2FAcadOracle%2FAcadOracle.Dal%2Fbin%2FDebug%2FAcadOracle.Dal.dll Namespace%3DAcadOracle.Dal.Interfaces Type%3D(Name%3DIRepository GenericParameterCount%3D1) Member%3D(Name%3DAllIncluding OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Core.dll&quot; Namespace%3DSystem.Linq.Expressions Type%3D(Name%3DExpression ArrayRank%3D1 ParentType%3D(Name%3DExpression GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DFunc GenericParameterCount%3D2 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRodrigo%2FDropbox%2FAula%2F2013I%2FSoftDev%2FAconselhador%2FAcadOracle%2FAcadOracle.Dal%2Fbin%2FDebug%2FAcadOracle.Dal.dll Namespace%3DAcadOracle.Dal.Interfaces Type%3D(Name%3DIRepository GenericParameterCount%3D1) ParameterIdentifier%3D0)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)]))])))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f191ff78-84a4-4af4-bea8-80c8ad3fba9a"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9fe058c5-3b2d-4d86-b4d0-4a05d518b36e">
+                    <propertyInstance
+                      Id="7dc3d3e0-d56a-4cf5-abec-cd0b80969a2a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a270e85f-d373-400c-9934-57a9db50c5a0">
+                    <propertyInstance
+                      Id="30e035ba-12ef-4d89-9d96-5b76289cc899"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="10ad74d3-16e3-460d-9744-bcf7c37895f9">
+                    <propertyInstance
+                      Id="c5c26810-f597-48ce-be4a-fc8855b872d7"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="60448e9b-ad79-46a1-a0bb-38dd09f3e958">
+                    <propertyInstance
+                      Id="2027c596-3c60-43c2-b02b-291165f22a81"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="392db407-ccbf-4080-803e-9c7bdca87456">
+                    <propertyInstance
+                      Id="1c07a52f-d283-42d2-8872-ccb2c2cfa397"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="192cf0c3-c934-432e-82b1-357e75df1282">
+                    <propertyInstance
+                      Id="814156fd-6460-4106-bd33-5abeb723488b"
+                      name="params"
+                      value="True" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bf7d81ea-ab32-42f0-95ae-ed0608404b47"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="7f855e54-802b-4828-9509-a97cb0abc157"
+                      LastKnownName="IQueryable&lt;T‎&gt;"
+                      LastKnownLocation="Package1_0054.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c672b0e1-94f4-49e4-bd6a-2861a9760801"
+                  name="includeProperties"
+                  direction="In"
+                  isOrdered="true">
+                  <referencesInternal>
+                    <reference
+                      Id="0734081f-3d2b-4362-90e6-cadc19d7ebb3"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRodrigo%2FDropbox%2FAula%2F2013I%2FSoftDev%2FAconselhador%2FAcadOracle%2FAcadOracle.Dal%2Fbin%2FDebug%2FAcadOracle.Dal.dll Namespace%3DAcadOracle.Dal.Interfaces Type%3D(Name%3DIRepository GenericParameterCount%3D1) Member%3D(Name%3DAllIncluding OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2FSystem.Core.dll&quot; Namespace%3DSystem.Linq.Expressions Type%3D(Name%3DExpression ArrayRank%3D1 ParentType%3D(Name%3DExpression GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DFunc GenericParameterCount%3D2 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRodrigo%2FDropbox%2FAula%2F2013I%2FSoftDev%2FAconselhador%2FAcadOracle%2FAcadOracle.Dal%2Fbin%2FDebug%2FAcadOracle.Dal.dll Namespace%3DAcadOracle.Dal.Interfaces Type%3D(Name%3DIRepository GenericParameterCount%3D1) ParameterIdentifier%3D0)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)]))])))]) ParameterIdentifier%3DincludeProperties"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <lowerValueInternal>
+                    <literalString
+                      Id="030d1462-f66c-419a-a859-2be1908da9b8"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="8c8521df-e762-47b1-a5aa-71a178bf82c2"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="5350c053-973d-4cab-80ee-9c1980cee5c3"
+                      LastKnownName="Expression"
+                      LastKnownLocation="Package4_0054.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="66d7e225-43e0-4aff-86c6-7d4575036ea5"
+            name="Find"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="622321fe-39c3-45e0-b0b2-08b88f862bab"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRodrigo%2FDropbox%2FAula%2F2013I%2FSoftDev%2FAconselhador%2FAcadOracle%2FAcadOracle.Dal%2Fbin%2FDebug%2FAcadOracle.Dal.dll Namespace%3DAcadOracle.Dal.Interfaces Type%3D(Name%3DIRepository GenericParameterCount%3D1) Member%3D(Name%3DFind OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f2985ccd-271b-4c37-bcf5-0f301f2ee2ea"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2ec3f5fd-78f8-4d48-83cb-c3bf54d8a35d">
+                    <propertyInstance
+                      Id="219a995f-f9da-4a02-ab1e-a571aa56146e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="69602267-d67b-481e-9c05-08df6b87b6bd">
+                    <propertyInstance
+                      Id="e032b224-ae37-4781-b002-5bde5ae58ffd"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="074c98ea-a5bb-4ba3-a566-b9e11497220a">
+                    <propertyInstance
+                      Id="961726cf-4fef-4126-91cb-d8566ad416f2"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="79ece221-cada-49ea-bbe1-cb322f6d44a1">
+                    <propertyInstance
+                      Id="efe23ae6-0d27-4ccc-ae06-941ad607893d"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="83b76903-02ab-4943-93ff-7c6ce51680fb">
+                    <propertyInstance
+                      Id="7369672d-43bd-4f00-8416-291f75a34fbf"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="141b2400-1ec6-4137-be9f-c4f7a498ab87">
+                    <propertyInstance
+                      Id="b64a2a40-122e-45c8-a4be-61796343a4c3"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7a2f2364-fb9b-4f30-a494-8fc78cb4de39"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="12c8efdd-beb3-40e4-8fb8-507aa8f6d8e0"
+                      LastKnownName="T"
+                      LastKnownLocation="Package_0046.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6aa0926a-f990-42d0-aeaa-fed96015daaa"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="8c4d9792-8ef6-442c-9b2f-a735b38411e1"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRodrigo%2FDropbox%2FAula%2F2013I%2FSoftDev%2FAconselhador%2FAcadOracle%2FAcadOracle.Dal%2Fbin%2FDebug%2FAcadOracle.Dal.dll Namespace%3DAcadOracle.Dal.Interfaces Type%3D(Name%3DIRepository GenericParameterCount%3D1) Member%3D(Name%3DFind OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="AcadOracleModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f3496a72-8040-4ec6-866d-bb562bbf2613"
+            name="InsertOrUpdate"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="296de742-7081-4be0-8306-d485795d9fe5"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRodrigo%2FDropbox%2FAula%2F2013I%2FSoftDev%2FAconselhador%2FAcadOracle%2FAcadOracle.Dal%2Fbin%2FDebug%2FAcadOracle.Dal.dll Namespace%3DAcadOracle.Dal.Interfaces Type%3D(Name%3DIRepository GenericParameterCount%3D1) Member%3D(Name%3DInsertOrUpdate OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRodrigo%2FDropbox%2FAula%2F2013I%2FSoftDev%2FAconselhador%2FAcadOracle%2FAcadOracle.Dal%2Fbin%2FDebug%2FAcadOracle.Dal.dll Namespace%3DAcadOracle.Dal.Interfaces Type%3D(Name%3DIRepository GenericParameterCount%3D1) ParameterIdentifier%3D0)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f6a12213-f70c-4212-8e50-497179bc8a92"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7e81a17e-6e5c-4f34-a49c-06ff8fb1251e">
+                    <propertyInstance
+                      Id="240a8438-16a4-48d6-acef-343812ecfc2a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d3b43563-4963-4992-b0e0-113a0c7763fb">
+                    <propertyInstance
+                      Id="cad7aae2-b773-4ffb-9012-90795d1b335c"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7b29ebe2-c086-49a3-81c8-f102d1dc2c70">
+                    <propertyInstance
+                      Id="b513f1d6-93cd-41c5-9ed1-5cb8c84e8beb"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="601d51cb-bafb-41ec-98d1-83571083d003">
+                    <propertyInstance
+                      Id="7efcea95-b23a-4690-ba5b-02adc4799da2"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ae839b0c-96de-4678-9bfc-4b388eb87603">
+                    <propertyInstance
+                      Id="8d75bf31-4e70-41e9-9afc-8d9bad179cbb"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d3aea2ce-0b8b-434c-b9d4-c6d16945e1eb">
+                    <propertyInstance
+                      Id="37d1791c-2c70-49f3-a4a4-e9f0239b1cb1"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7cb8c465-67cb-4538-8df8-8e0fefe26dd3"
+                  name="disciplina"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="c0a56fa5-e70c-4830-b1b7-5c645bdc8d95"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRodrigo%2FDropbox%2FAula%2F2013I%2FSoftDev%2FAconselhador%2FAcadOracle%2FAcadOracle.Dal%2Fbin%2FDebug%2FAcadOracle.Dal.dll Namespace%3DAcadOracle.Dal.Interfaces Type%3D(Name%3DIRepository GenericParameterCount%3D1) Member%3D(Name%3DInsertOrUpdate OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRodrigo%2FDropbox%2FAula%2F2013I%2FSoftDev%2FAconselhador%2FAcadOracle%2FAcadOracle.Dal%2Fbin%2FDebug%2FAcadOracle.Dal.dll Namespace%3DAcadOracle.Dal.Interfaces Type%3D(Name%3DIRepository GenericParameterCount%3D1) ParameterIdentifier%3D0)]) ParameterIdentifier%3Ddisciplina"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="12c8efdd-beb3-40e4-8fb8-507aa8f6d8e0"
+                      LastKnownName="T"
+                      LastKnownLocation="Package_0046.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1991c2cc-f0d8-47dd-af35-59e2a46937c6"
+            name="Delete"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="3921806a-bf50-44af-a06c-1c661ec74e79"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRodrigo%2FDropbox%2FAula%2F2013I%2FSoftDev%2FAconselhador%2FAcadOracle%2FAcadOracle.Dal%2Fbin%2FDebug%2FAcadOracle.Dal.dll Namespace%3DAcadOracle.Dal.Interfaces Type%3D(Name%3DIRepository GenericParameterCount%3D1) Member%3D(Name%3DDelete OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="9a6bfe56-48c6-4e8f-9c22-ca1663163dc0"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5cb9bded-1ae7-4c98-869c-39dce3104237">
+                    <propertyInstance
+                      Id="51f4701d-7a1c-4d78-8cac-9ab616294fe4"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="398c4abb-be45-4b65-ab69-311880e8fb5d">
+                    <propertyInstance
+                      Id="85cd3037-e3d8-4d9e-ada2-ae1a3bf30939"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="40e9778b-d900-4b93-b378-718ee4dd8677">
+                    <propertyInstance
+                      Id="14bb8cc7-f215-4095-8ab2-c134d2dabf6d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="343a007a-0b58-4d47-876f-f33a6aa00095">
+                    <propertyInstance
+                      Id="c6e637b2-21f9-4b04-b3a1-254090a54061"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="66328024-b414-4e39-a047-f77f7adf699a">
+                    <propertyInstance
+                      Id="e70dcc0a-1568-40e5-ad87-5a50a111e814"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7ecf1b74-cd82-41ee-8592-c7bd8afa4e22">
+                    <propertyInstance
+                      Id="2e9d039d-a283-40b2-926e-7df8c9e298fd"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8254b2fa-c4de-4375-b483-02566ef3886b"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="9b95326d-d90f-4542-acee-007923779961"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRodrigo%2FDropbox%2FAula%2F2013I%2FSoftDev%2FAconselhador%2FAcadOracle%2FAcadOracle.Dal%2Fbin%2FDebug%2FAcadOracle.Dal.dll Namespace%3DAcadOracle.Dal.Interfaces Type%3D(Name%3DIRepository GenericParameterCount%3D1) Member%3D(Name%3DDelete OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="AcadOracleModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="b7aa268f-149c-4f18-b138-68c2049bed26"
+            name="Save"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="30d10a34-5bc4-4edc-b834-6487590d8ec3"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRodrigo%2FDropbox%2FAula%2F2013I%2FSoftDev%2FAconselhador%2FAcadOracle%2FAcadOracle.Dal%2Fbin%2FDebug%2FAcadOracle.Dal.dll Namespace%3DAcadOracle.Dal.Interfaces Type%3D(Name%3DIRepository GenericParameterCount%3D1) Member%3DSave"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="3a0c1f7c-2257-4100-be20-293c16bdc443"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cf4d4d71-6afc-48ff-ab46-208e5e49076c">
+                    <propertyInstance
+                      Id="45ba2463-1695-4a87-ae3a-60d80bcaeb99"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bedd5d83-e336-4822-8a63-66d1ffb68426">
+                    <propertyInstance
+                      Id="24dd9a09-5446-4f93-9c02-221d96a17aed"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9b0a18fa-c5c8-4d98-9eb5-78fe74042dc6">
+                    <propertyInstance
+                      Id="90d9c765-b527-4dc8-a126-a425d86a84d3"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e8441341-2e7e-440c-a4ea-3190d028d03a">
+                    <propertyInstance
+                      Id="e1691d8b-f2b5-43a2-a7cd-562045aab5c3"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="94128341-74ad-4156-96ba-3d856c0995d4">
+                    <propertyInstance
+                      Id="e8fc1079-3306-4a4f-a808-7d6134661d07"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="16f951ac-ec17-42f3-85f1-cd2e85c95748">
+                    <propertyInstance
+                      Id="07543e67-e8bf-4141-8f9b-f7fc83473721"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

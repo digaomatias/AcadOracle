@@ -87,7 +87,6 @@
     <Compile Include="Interfaces\ICursoRepository.cs" />
     <Compile Include="Interfaces\IDisciplinaRepository.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
-    <Compile Include="Interfaces\IRepositoryContext.cs" />
     <Compile Include="Interfaces\ITurmaRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TurmaRepository.cs" />

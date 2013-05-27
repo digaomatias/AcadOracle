@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="1204d014-a728-41b8-b51d-87e2a2added2"
+  name="Models"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="71eada5d-c29c-4c7d-b007-9541cdacfc92"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DAcadOracle.DomainModel.Models"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="65d00de2-b3ea-4efc-a44e-d063377a0f8c"
+        name="Curso"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="900601ca-f123-4296-a072-897fb538cb89"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRodrigo%2FDropbox%2FAula%2F2013I%2FSoftDev%2FAconselhador%2FAcadOracle%2FAcadOracle.DomainModel%2Fbin%2FDebug%2FAcadOracle.DomainModel.dll Namespace%3DAcadOracle.DomainModel.Models Type%3DCurso"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="ae95c246-ae7d-4487-9b6b-a0adda223a8d"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8c8e9a85-31a1-4250-8bdf-f32f2bfef111">
+                <propertyInstance
+                  Id="8858f69d-28be-4f37-89e7-b5d4260d658d"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b431910c-2d07-4664-bf81-c90c7d1aeded">
+                <propertyInstance
+                  Id="1cb45341-68a4-4728-ba8e-dcffbb490680"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="adf0cb17-16ac-464a-ab35-c31675ed5c88">
+                <propertyInstance
+                  Id="2eee2d1b-3241-4549-9dc2-394413f1d1bd"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a35868cc-5dee-4d8c-b7e1-3616c8ae6137">
+                <propertyInstance
+                  Id="a412496c-2fce-40af-88aa-23c97423e856"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e9b28117-b6b2-4e93-a2b5-df858633b3c5">
+                <propertyInstance
+                  Id="8dba5a3c-5e0d-4915-a1ca-b5b184fd9a66"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="e01ed031-a70b-48dd-8b0c-b451ac2f6e21"
+        name="AcadOracleDBContext"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="cfc24775-6a8c-4d8c-a900-71d9c0aeefb0"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRodrigo%2FDropbox%2FAula%2F2013I%2FSoftDev%2FAconselhador%2FAcadOracle%2FAcadOracle.DomainModel%2Fbin%2FDebug%2FAcadOracle.DomainModel.dll Namespace%3DAcadOracle.DomainModel.Models Type%3DAcadOracleDBContext"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="014c4121-402c-436b-b8e3-541b4d77ff66"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="581cda4f-5bb5-41be-9384-4e33422e30df">
+                <propertyInstance
+                  Id="a2f7ff60-a8d2-475d-8d24-3f610ec1b9bf"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bebc45b8-e6ca-4203-b868-cc0374939c27">
+                <propertyInstance
+                  Id="1aaa8a59-4264-4e43-b8e1-5daf534ff33e"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="88c845b7-caeb-43c8-bddb-cfe4f698a38a">
+                <propertyInstance
+                  Id="363cc44e-263c-4562-a1c3-808eec62cd79"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4f18b010-e3a8-4c2f-9405-e8cab1780ac0">
+                <propertyInstance
+                  Id="ad767fea-6413-4d27-879b-e48f71fba719"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2fcd35be-1f02-45c2-b860-15472a64a3e0">
+                <propertyInstance
+                  Id="92aacfe5-b18f-4500-90d6-e1cb32074a3c"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="dd800327-9db0-4203-a3d5-1abfbdf24faa"
+        name="Turma"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="676a0341-ad6e-4d0f-afb1-9f0a2e872657"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRodrigo%2FDropbox%2FAula%2F2013I%2FSoftDev%2FAconselhador%2FAcadOracle%2FAcadOracle.DomainModel%2Fbin%2FDebug%2FAcadOracle.DomainModel.dll Namespace%3DAcadOracle.DomainModel.Models Type%3DTurma"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="bfe6b3a3-4525-4b22-8c4f-af4baa0133d3"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e4aae504-d9e9-4fb3-b97e-f2a9bff754d3">
+                <propertyInstance
+                  Id="216b750a-3a8d-4385-85f6-f30b2fd74c1b"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="670f2826-f3c5-4fa0-916c-d38bf857b128">
+                <propertyInstance
+                  Id="e734e459-23dd-44a2-a658-0741fedad403"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="273f8839-c479-4f1a-8389-e033f7938e81">
+                <propertyInstance
+                  Id="6c9c2e01-41ca-4af4-b5a0-4af9418ae97d"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="758e671e-dfb2-4658-be13-5baa5af67969">
+                <propertyInstance
+                  Id="b2db9717-90ef-4057-aff7-f904ce1ae850"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="99b1f5cf-2317-4d0c-9898-b19126ff65ba">
+                <propertyInstance
+                  Id="bdd24201-8d69-4009-9399-5cdffd7de36a"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="32d9e604-0a32-4e52-875b-04da5b0c4796"
+        name="Disciplina"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="a06a37a8-d830-4dc3-ae4f-336af2bc62b2"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRodrigo%2FDropbox%2FAula%2F2013I%2FSoftDev%2FAconselhador%2FAcadOracle%2FAcadOracle.DomainModel%2Fbin%2FDebug%2FAcadOracle.DomainModel.dll Namespace%3DAcadOracle.DomainModel.Models Type%3DDisciplina"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="342806fb-ceb6-411a-bd96-9491bea557ad"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="af103c29-fb0c-4a40-abbe-61a1553bd19c">
+                <propertyInstance
+                  Id="1859c1f5-c0f0-4e05-905f-b83f7da3fca2"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="82002e77-1311-4f3d-86c0-9192731b6f12">
+                <propertyInstance
+                  Id="7f941673-250a-4f7d-95a7-6f5249b3c877"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="004a3101-6a4a-44a4-b4e9-43db7b42143f">
+                <propertyInstance
+                  Id="d3fac651-7b9c-49ae-a183-5466971a0578"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0a8c68f9-d23d-4916-a643-988ae8ae11a2">
+                <propertyInstance
+                  Id="0eaee438-1b99-47e8-bc50-fac2d15cf2c3"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="95772236-534b-4f64-8309-ac35b8180685">
+                <propertyInstance
+                  Id="5ece45f4-1d87-4dbd-a771-7788fa836af4"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>
