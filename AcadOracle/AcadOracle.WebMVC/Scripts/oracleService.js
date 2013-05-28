@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-    $(document).tooltip();
     $('#btnReload').click(function () {
 
         var req = getDisciplinasRequestModel();

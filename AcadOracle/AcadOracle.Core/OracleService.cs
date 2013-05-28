@@ -65,8 +65,10 @@ namespace AcadOracle.Core
                         h => h.DiaSemana == horario.DiaSemana && h.Horarios.Any(ha => horario.Horarios.Contains(ha))))
                                          .ToList();
 
-                if (conflitantes.Count > 1 && !listaDeCombinacoesConflitantes.Any(
-                    l => l.All(t => conflitantes.Any(c => c.Disciplina == t.Disciplina))))
+                /*if (conflitantes.Count > 1 && !listaDeCombinacoesConflitantes.Any(
+                    l => l.All(t => conflitantes.Any(c => c.Disciplina == t.Disciplina))))*/
+                
+                if(conflitantes.Count > 1 && !conflitantes.All(c => listaDeCombinacoesConflitantes.Any(l => l.Contains(c))))
                     listaDeCombinacoesConflitantes.Add(conflitantes);
             }
 
@@ -97,12 +99,20 @@ namespace AcadOracle.Core
             var repository = AcadInjector.AcadContainer.GetInstance<ITurmaRepository>();
             var turmas = repository.GetByDisciplina(candidatasCursaveis.AsEnumerable());        
             
-            if(restricoes != null)
-                turmas = turmas.AplicarRestricoes(restricoes);
-            
-            if(turmas.Any())
-                return FiltrarTurmas(turmas);
+            foreach (var restricao in restricoes)
+            {
+                if (!(restricao is RestricaoCreditos))
+                {
+                    turmas = restricao.AplicarRestricao(turmas);
+                }
+            }
 
+            if (turmas.Any())
+            {
+                var result = FiltrarTurmas(turmas);
+                result = result.AplicarRestricoes(restricoes);
+                return result;
+            }
             return turmas;
         }
     }

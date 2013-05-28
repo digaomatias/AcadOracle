@@ -67,6 +67,8 @@ namespace AcadOracle.WebMVC.Controllers
                     counter++;
                 }
 
+                data.Add("id" + counter, string.Format("Total de créditos: {0}", turmas.Sum(t => t.Disciplina.Creditos)));
+
                 return RedirectToAction("Show", data);
             }
             result.NoResultsFound = true;
