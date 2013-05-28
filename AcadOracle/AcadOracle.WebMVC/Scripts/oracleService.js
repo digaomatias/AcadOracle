@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-
+    $(document).tooltip();
     $('#btnReload').click(function () {
 
         var req = getDisciplinasRequestModel();
@@ -22,7 +22,7 @@ function getDisciplinasRequestModel() {
         cursadas[i] = $(selected).val();
     });
 
-    var cursoId = $("#ddlCursos").val();
+    var cursoId = $("#CursoId").val();
 
     // poor man's validation
     return { CursoId: cursoId, CursadasId: cursadas };
@@ -38,4 +38,15 @@ function populateCursadas(data) {
 
     $("#RestricaoDisciplinasId option").remove();
     $("#CursadasId :not(:selected)").clone().each(function (i, opt) { $("#RestricaoDisciplinasId").append(opt); });
+}
+
+function showNoResultsFoundMessage() {
+    $( "#dialog-message" ).dialog({
+        modal: true,
+        buttons: {
+            Ok: function() {
+                $( this ).dialog( "close" );
+            }
+        }
+    });
 }

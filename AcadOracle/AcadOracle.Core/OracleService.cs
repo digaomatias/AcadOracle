@@ -85,24 +85,25 @@ namespace AcadOracle.Core
         /// <param name="candidatas"></param>
         /// <param name="cursadas"></param>
         /// <returns></returns>
-        public IEnumerable<Turma> SugerirDisciplinas(int semestreAtual, IEnumerable<Disciplina> candidatas, IEnumerable<Disciplina> cursadas)
+        public IEnumerable<Turma> SugerirDisciplinas(IEnumerable<Disciplina> candidatas, IEnumerable<Disciplina> cursadas)
         {
-            return SugerirDisciplinas(semestreAtual, candidatas, cursadas, null);
+            return SugerirDisciplinas(candidatas, cursadas, null);
         }
 
-        public IEnumerable<Turma> SugerirDisciplinas(int semestreAtual, IEnumerable<Disciplina> candidatas, IEnumerable<Disciplina> cursadas, IEnumerable<Restricao> restricoes )
+        public IEnumerable<Turma> SugerirDisciplinas(IEnumerable<Disciplina> candidatas, IEnumerable<Disciplina> cursadas, IEnumerable<Restricao> restricoes )
         {
             //Somente disciplinas do semestre atual ou anterior
-            var candidatasCursaveis = candidatas.Where(d => d.Semestre <= semestreAtual);
-            //Somente disciplinas as quais os pre-requisitos já foram cursados ou que não tenham pre requisitos
-            candidatasCursaveis = candidatas.Where(c => c.PreRequisitos.Count() == 0 || c.PreRequisitos.All(cursadas.Contains));
+            var candidatasCursaveis = candidatas.Where(c => !c.PreRequisitos.Any() || c.PreRequisitos.All(cursadas.Contains));
             var repository = AcadInjector.AcadContainer.GetInstance<ITurmaRepository>();
             var turmas = repository.GetByDisciplina(candidatasCursaveis.AsEnumerable());        
             
             if(restricoes != null)
                 turmas = turmas.AplicarRestricoes(restricoes);
             
-            return FiltrarTurmas(turmas);
+            if(turmas.Any())
+                return FiltrarTurmas(turmas);
+
+            return turmas;
         }
     }
 }

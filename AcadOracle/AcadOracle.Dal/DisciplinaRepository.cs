@@ -54,7 +54,7 @@ namespace AcadOracle.Dal
             context.SaveChanges();
         }
 
-        public IEnumerable<Disciplina> GetPendentes(Curso curso, IEnumerable<Disciplina> cursadas)
+        public IEnumerable<Disciplina> GetPendentesECursadas(Curso curso, IEnumerable<Disciplina> cursadas)
         {
             int creditos = cursadas.Any() ? cursadas.Sum(c => c.Creditos) : 0;
             IEnumerable<int> disciplinaIds = cursadas.Select(c => c.Id).ToArray();
@@ -66,6 +66,23 @@ namespace AcadOracle.Dal
                         && (disciplina.PreCreditos <= creditos && disciplina.Cursoes.Any(c => c.Id == curso.Id))
                         )
                     select disciplina).Distinct();
+
+            return r.ToArray();
+        }
+
+        public IEnumerable<Disciplina> GetPendentes(Curso curso, IEnumerable<Disciplina> cursadas)
+        {
+            int creditos = cursadas.Any() ? cursadas.Sum(c => c.Creditos) : 0;
+            IEnumerable<int> disciplinaIds = cursadas.Select(c => c.Id).ToArray();
+
+            var r = (from disciplina in this.All
+                     where
+                         (
+                         (!disciplina.PreRequisitos.Any() || disciplina.PreRequisitos.All(pr => disciplinaIds.Any(id => id == pr.Id)))
+                         && (disciplina.PreCreditos <= creditos && disciplina.Cursoes.Any(c => c.Id == curso.Id))
+                         && disciplinaIds.All(d => d != disciplina.Id)
+                         )
+                     select disciplina).Distinct();
 
             return r.ToArray();
         }

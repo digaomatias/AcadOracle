@@ -10,6 +10,7 @@ namespace AcadOracle.Dal.Interfaces
 {
     public interface IDisciplinaRepository : IRepository<Disciplina>
     {
+        IEnumerable<Disciplina> GetPendentesECursadas(Curso curso, IEnumerable<Disciplina> cursadas);
         IEnumerable<Disciplina> GetPendentes(Curso curso, IEnumerable<Disciplina> cursadas);
     }
 }

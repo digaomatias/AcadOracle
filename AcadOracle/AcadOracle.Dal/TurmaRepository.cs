@@ -56,7 +56,10 @@ namespace AcadOracle.Dal
 
         public IEnumerable<Turma> GetByDisciplina(IEnumerable<Disciplina> disciplinas)
         {
-            throw new NotImplementedException();
+            int[] disciplinasId = disciplinas.Select(d => d.Id).ToArray();
+            var result = this.All.Where(t => disciplinasId.Any(d => d == t.DisciplinaId)).ToArray();
+
+            return result;
         }
 
         public void Dispose() 

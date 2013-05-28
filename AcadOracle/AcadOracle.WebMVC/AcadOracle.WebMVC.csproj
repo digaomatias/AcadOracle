@@ -189,6 +189,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\ActionFilters\BindArrayAttribute.cs" />
     <Compile Include="Infrastructure\SimpleInjectorInitializer.cs" />
     <Compile Include="Infrastructure\SimpleInjectorWebApiDependencyResolver.cs" />
     <Compile Include="Models\AccountModels.cs" />
@@ -336,7 +337,8 @@
     <Content Include="Views\Turma\Details.cshtml" />
     <Content Include="Views\Turma\Index.cshtml" />
     <Content Include="Views\Turma\_CreateOrEdit.cshtml" />
-    <Content Include="Views\OracleService\Index.cshtml" />
+    <Content Include="Views\OracleService\Create.cshtml" />
+    <Content Include="Views\OracleService\Show.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

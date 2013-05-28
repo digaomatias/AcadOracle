@@ -1,0 +1,84 @@
+﻿@model AcadOracle.WebMVC.Models.RequisicaoSugestaoModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryui")
+<script type="text/javascript" language="javascript" src="~/Scripts/oracleService.js"></script>
+
+@if (Model.NoResultsFound)
+{
+    <script type="text/javascript">
+        $(document).ready(function() {
+            showNoResultsFoundMessage();
+        }) 
+    </script>
+}
+
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+<fieldset>
+    <legend>Sugestão de Disciplinas</legend>
+        
+    <div class="editor-label">
+        <b>Selecione o curso:</b>
+    </div>
+    <div class="editor-field">
+        @Html.DropDownListFor(m => m.CursoId, (SelectList)ViewBag.CursoList)
+    </div>
+    <div class="editor-label">
+        @Html.LabelFor(m => m.Disponiveis, "Disciplinas Disponíveis:")
+        Marque as disciplinas que você já cursou.
+    </div>
+
+    <div class="editor-field">
+        @Html.ListBoxFor(m => m.CursadasId, Model.Disponiveis, new { title="Marque as disciplinas que você já cursou.", style="width: 310px;" })
+        <br/>
+        <input type="button" value="Atualizar Cursadas" id="btnReload"/>
+    </div>
+    
+    <div class="editor-label">
+        @Html.LabelFor(m => m.RestricaoDisciplinasId, "Restrições Disciplinas:")
+        Marque as disciplinas que você não deseja cursar.
+    </div>
+
+    <div class="editor-field">
+        @Html.ListBoxFor(m => m.RestricaoDisciplinasId, Model.Disponiveis, new { title="Marque as disciplinas que você não deseja cursar.", style="width: 310px;" })
+    </div>
+    
+    <div class="editor-label">
+        @Html.LabelFor(m => m.RestricaoCreditos, "Máximo de créditos:")
+    </div>
+
+    <div class="editor-field">
+        @Html.TextBoxFor(m => m.RestricaoCreditos, new { title = "o default é 24, caso esse campo fique vazio."})    
+    </div>
+    
+    <div class="editor-label">
+        @Html.LabelFor(m => m.RestricaoHorarios, "Horários que não desejo cursar:")
+        No formato 2jk (segunda jk), 5lm(quinta lm), etc...
+    </div>
+
+    <div class="editor-field">
+        @Html.TextBoxFor(m => m.RestricaoHorarios, new { title = "No formato 2jk (segunda jk), 5lm(quinta lm), etc..."})    
+    </div>
+    
+    <p>
+        <input type="submit" value="Consultar Sugestão" />
+    </p>
+</fieldset>
+}
+
+<div id="dialog-message" title="Nenhuma Sugestão" style="display: none;">
+  <p>
+    <span class="ui-icon ui-icon-circle-check" style="float: left; margin: 0 7px 50px 0;"></span>
+    Não há disciplinas disponíveis para as disciplinas selecionadas. 
+  </p>
+  <p>
+    Adicione mais turmas @Html.ActionLink("aqui", "Create", "Turma") .
+  </p>
+</div>

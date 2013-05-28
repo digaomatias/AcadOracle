@@ -21,7 +21,7 @@ namespace AcadOracle.DomainModel.Restricao
 
         public override IEnumerable<Turma> AplicarRestricao(IEnumerable<Turma> turmas)
         {
-            IEnumerable<Turma> turmasParaRemover = turmas.Where(t => restricao.Contains(t.Disciplina)).ToArray();
+            IEnumerable<Turma> turmasParaRemover = turmas.Where(t => restricao.Any(r => r.Id == t.Disciplina.Id)).ToArray();
             var result = turmas.ToList();
             result.RemoveAll(turmasParaRemover.Contains);
             return result;

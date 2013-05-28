@@ -120,7 +120,7 @@ namespace AcadOracle.UnitTests
             #endregion
 
             OracleService target = new OracleService();
-            IEnumerable<Turma> turmas = target.SugerirDisciplinas(semestreAtual, pendentes, cursadas);
+            IEnumerable<Turma> turmas = target.SugerirDisciplinas(pendentes, cursadas);
 
             repository.VerifyAll();
 
@@ -216,7 +216,7 @@ namespace AcadOracle.UnitTests
             #endregion
 
             OracleService target = new OracleService();
-            IEnumerable<Turma> turmas = target.SugerirDisciplinas(semestreAtual, pendentes, cursadas, new Restricao[] {restricao1});
+            IEnumerable<Turma> turmas = target.SugerirDisciplinas(pendentes, cursadas, new Restricao[] {restricao1});
 
             repository.VerifyAll();
 
@@ -298,7 +298,7 @@ namespace AcadOracle.UnitTests
             #endregion
 
             OracleService target = new OracleService();
-            IEnumerable<Turma> turmas = target.SugerirDisciplinas(semestreAtual, pendentes, cursadas, new Restricao[]{restricao1});
+            IEnumerable<Turma> turmas = target.SugerirDisciplinas(pendentes, cursadas, new Restricao[]{restricao1});
 
             repository.VerifyAll();
 
@@ -380,7 +380,7 @@ namespace AcadOracle.UnitTests
             #endregion
 
             OracleService target = new OracleService();
-            IEnumerable<Turma> turmas = target.SugerirDisciplinas(semestreAtual, pendentes, cursadas, new Restricao[] { restricao1 });
+            IEnumerable<Turma> turmas = target.SugerirDisciplinas(pendentes, cursadas, new Restricao[] { restricao1 });
 
             repository.VerifyAll();
 

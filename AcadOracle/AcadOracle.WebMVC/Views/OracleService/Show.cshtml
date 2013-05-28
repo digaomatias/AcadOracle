@@ -1,0 +1,17 @@
+﻿@model IEnumerable<string>
+@{
+    ViewBag.Title = "Show";
+}
+
+<h2>Sugestão de turmas:</h2>
+
+@foreach (var turma in Model)
+{
+    <br/>
+    @turma
+}
+<br/>
+
+<div>
+    @Html.ActionLink("Voltar para os filtros", "Create")
+</div>

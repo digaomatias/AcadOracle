@@ -50,6 +50,16 @@ mark {
     float: right;
 }
 
+.editor-field-left {
+    width: 300px;
+    float: left;   
+}
+
+.editor-field-right {
+    width: 300px;
+    float: right;   
+}
+
 .clear-fix:after {
     content: ".";
     clear: both;

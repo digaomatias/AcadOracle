@@ -10,9 +10,11 @@ namespace AcadOracle.WebMVC.Models
 {
     public class RequisicaoSugestaoModel
     {
+        public bool NoResultsFound { get; set; }
         public IEnumerable<int> RestricaoDisciplinasId { get; set; }
         public string RestricaoHorarios { get; set; }
         public int RestricaoCreditos { get; set; }
+        public int CursoId { get; set; }
         public IEnumerable<int> CursadasId { get; set; }
         public MultiSelectList Disponiveis { get; set; } 
     }

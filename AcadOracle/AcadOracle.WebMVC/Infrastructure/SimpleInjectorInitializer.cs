@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Web;
 using System.Web.Http.Controllers;
+using AcadOracle.Common;
 using AcadOracle.Core;
 using AcadOracle.Core.Interfaces;
 using AcadOracle.Dal;
@@ -38,6 +39,7 @@ namespace AcadOracle.WebMVC.Infrastructure
             container.Register<ITurmaRepository, TurmaRepository>();
             container.Register<IDisciplinaRepository, DisciplinaRepository>();
             container.Register<IOracleService, OracleService>();
+            AcadInjector.AcadContainer.Register<ITurmaRepository, TurmaRepository>();
 
             // register MVC controllers (This is an extension method from the integration package).
             container.RegisterMvcControllers(Assembly.GetExecutingAssembly());

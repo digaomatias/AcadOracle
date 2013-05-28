@@ -20,5 +20,13 @@ namespace AcadOracle.DomainModel.Models
             get { return TurmaHorario.ToTurmaHorarios(); }
             set { TurmaHorario = value.ToTurmaHorarioString(); }
         }
+
+        public override string ToString()
+        {
+            if(Disciplina != null && TurmaHorario != null)
+                return string.Format("{0} - {1} - {2}", Numero, Disciplina.Nome, TurmaHorario);
+
+            return base.ToString();
+        }
     }
 }
