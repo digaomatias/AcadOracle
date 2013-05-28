@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
 using System.Linq;
@@ -51,6 +52,22 @@ namespace AcadOracle.Dal
         public void Save()
         {
             context.SaveChanges();
+        }
+
+        public IEnumerable<Disciplina> GetPendentes(Curso curso, IEnumerable<Disciplina> cursadas)
+        {
+            int creditos = cursadas.Any() ? cursadas.Sum(c => c.Creditos) : 0;
+            IEnumerable<int> disciplinaIds = cursadas.Select(c => c.Id).ToArray();
+
+            var r = (from disciplina in this.All
+                    where
+                        (
+                        (!disciplina.PreRequisitos.Any() || disciplina.PreRequisitos.All(pr => disciplinaIds.Any(id => id == pr.Id))) 
+                        && (disciplina.PreCreditos <= creditos && disciplina.Cursoes.Any(c => c.Id == curso.Id))
+                        )
+                    select disciplina).Distinct();
+
+            return r.ToArray();
         }
 
         public void Dispose() 

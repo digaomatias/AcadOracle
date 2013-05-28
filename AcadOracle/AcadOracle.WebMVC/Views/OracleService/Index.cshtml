@@ -5,7 +5,16 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Sugestão de Disciplinas</h2>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryui")
+<script type="text/javascript" language="javascript" src="~/Scripts/oracleService.js"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Sugestão de Disciplinas</legend>
+        
+ 
 
 <div class="editor-label">
     <b>Selecione o curso:</b>
@@ -13,40 +22,45 @@
 <div class="editor-field">
     @Html.DropDownList("ddlCursos", (SelectList)ViewBag.CursoList)
 </div>
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Disponiveis, "Disciplinas Disponíveis:")
+            Marque as disciplinas que você já cursou.
+        </div>
 
-<div class="sugestao_data">
+        <div class="editor-field">
+            @Html.ListBoxFor(m => m.CursadasId, Model.Disponiveis, new { title="Marque as disciplinas que você já cursou.", style="width: 310px;" })
+            <br/>
+            <input type="button" value="Atualizar Cursadas" id="btnReload"/>
+        </div>
     
-    <div class="editor-label">
-        Disciplinas
-    </div>
+        <div class="editor-label">
+            @Html.LabelFor(m => m.RestricaoDisciplinasId, "Restrições Disciplinas:")
+            Marque as disciplinas que você não deseja cursar.
+        </div>
 
-    <div class="editor-field">
-            Aqui, adicionar as disciplinas com opção de marcar as cursadas e ir habilitando as que podem ser cursadas.
-    </div>
+        <div class="editor-field">
+            @Html.ListBoxFor(m => m.RestricaoDisciplinasId, Model.Disponiveis, new { title="Marque as disciplinas que você não deseja cursar.", style="width: 310px;" })
+        </div>
     
-    <div class="editor-label">
-        @Html.LabelFor(m => m.RestricaoCreditos, "Máximo de créditos:")
-    </div>
+        <div class="editor-label">
+            @Html.LabelFor(m => m.RestricaoCreditos, "Máximo de créditos:")
+        </div>
 
-    <div class="editor-field">
-        @Html.TextBoxFor(m => m.RestricaoCreditos, new { title = "o default é 24, caso esse campo fique vazio."})    
-    </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(m => m.RestricaoCreditos, new { title = "o default é 24, caso esse campo fique vazio."})    
+        </div>
     
-    <div class="editor-label">
-        @Html.LabelFor(m => m.RestricaoHorarios, "Horários que não desejo cursar:")
-    </div>
+        <div class="editor-label">
+            @Html.LabelFor(m => m.RestricaoHorarios, "Horários que não desejo cursar:")
+            No formato 2jk (segunda jk), 5lm(quinta lm), etc...
+        </div>
 
-    <div class="editor-field">
-         @Html.TextBoxFor(m => m.RestricaoHorarios, new { title = "No formato 2jk (segunda jk), 5lm(quinta lm), etc..."})    
-    </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(m => m.RestricaoHorarios, new { title = "No formato 2jk (segunda jk), 5lm(quinta lm), etc..."})    
+        </div>
     
-    <div class="editor-label">
-        
-    </div>
-
-    <div class="editor-field">
-            
-    </div>
-
-
-</div>
+               <p>
+            <input type="submit" value="Consultar Sugestão" />
+        </p>
+    </fieldset>
+}

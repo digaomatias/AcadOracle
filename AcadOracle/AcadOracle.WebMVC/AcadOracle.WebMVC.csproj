@@ -192,6 +192,7 @@
     <Compile Include="Infrastructure\SimpleInjectorInitializer.cs" />
     <Compile Include="Infrastructure\SimpleInjectorWebApiDependencyResolver.cs" />
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\DisciplinasRequestModel.cs" />
     <Compile Include="Models\Extensions\MvcExtensions.cs" />
     <Compile Include="Models\RequisicaoSugestaoModel.cs" />
     <Compile Include="Models\TurmaEditModel.cs" />
@@ -277,6 +278,7 @@
     <Content Include="Scripts\knockout-2.1.0.debug.js" />
     <Content Include="Scripts\knockout-2.1.0.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\oracleService.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
