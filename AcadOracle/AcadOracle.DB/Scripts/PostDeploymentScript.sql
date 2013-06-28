@@ -24,6 +24,7 @@ GO
 
 
 DELETE FROM DisciplinasPreRequisitos;
+DELETE FROM Turma;
 DELETE FROM Disciplina;
 
 DECLARE @semestre INT = 1;
@@ -229,8 +230,8 @@ INSERT INTO Turma (DisciplinaId, Numero, TurmaHorario) VALUES((SELECT Id FROM Di
 INSERT INTO Turma (DisciplinaId, Numero, TurmaHorario) VALUES((SELECT Id FROM Disciplina WHERE Nome='Linguagens Formais'), 138, '3JK5JK');
 INSERT INTO Turma (DisciplinaId, Numero, TurmaHorario) VALUES((SELECT Id FROM Disciplina WHERE Nome='Logica para Computacao'), 128, '3JK5JK');
 INSERT INTO Turma (DisciplinaId, Numero, TurmaHorario) VALUES((SELECT Id FROM Disciplina WHERE Nome='Logica para Computacao'), 138, '2LM4LM');
-INSERT INTO Turma (DisciplinaId, Numero, TurmaHorario) VALUES((SELECT Id FROM Disciplina WHERE Nome='Organizacao e Arquitetura de Computadores I'), 128, '2LM4LM');
-INSERT INTO Turma (DisciplinaId, Numero, TurmaHorario) VALUES((SELECT Id FROM Disciplina WHERE Nome='Organizacao e Arquitetura de Computadores I'), 138, '2JK4JK');
+INSERT INTO Turma (DisciplinaId, Numero, TurmaHorario) VALUES((SELECT Id FROM Disciplina WHERE Nome='Organizacao e Arquit. de Computadores I'), 128, '2LM4LM');
+INSERT INTO Turma (DisciplinaId, Numero, TurmaHorario) VALUES((SELECT Id FROM Disciplina WHERE Nome='Organizacao e Arquit. de Computadores I'), 138, '2JK4JK');
 
 INSERT INTO Turma (DisciplinaId, Numero, TurmaHorario) VALUES((SELECT Id FROM Disciplina WHERE Nome='Algoritmos e Programacao III'), 128, '2LM4LM6LM');
 INSERT INTO Turma (DisciplinaId, Numero, TurmaHorario) VALUES((SELECT Id FROM Disciplina WHERE Nome='Algoritmos e Programacao III'), 138, '2JK4JK6JK');
@@ -240,7 +241,7 @@ INSERT INTO Turma (DisciplinaId, Numero, TurmaHorario) VALUES((SELECT Id FROM Di
 INSERT INTO Turma (DisciplinaId, Numero, TurmaHorario) VALUES((SELECT Id FROM Disciplina WHERE Nome='Laboratorio de Banco de Dados I'), 148, '6LM');
 INSERT INTO Turma (DisciplinaId, Numero, TurmaHorario) VALUES((SELECT Id FROM Disciplina WHERE Nome='Modelagem de Software'), 128, '2NP4NP');
 INSERT INTO Turma (DisciplinaId, Numero, TurmaHorario) VALUES((SELECT Id FROM Disciplina WHERE Nome='Modelagem de Software'), 138, '2LM4LM');
-INSERT INTO Turma (DisciplinaId, Numero, TurmaHorario) VALUES((SELECT Id FROM Disciplina WHERE Nome='Organizacao e Arquitetura de Computadores II'), 128, '3JK5JK');
+INSERT INTO Turma (DisciplinaId, Numero, TurmaHorario) VALUES((SELECT Id FROM Disciplina WHERE Nome='Organizacao e Arquit. de Computadores II'), 128, '3JK5JK');
 INSERT INTO Turma (DisciplinaId, Numero, TurmaHorario) VALUES((SELECT Id FROM Disciplina WHERE Nome='Paradigmas de Linguagens de Programacao'), 128, '3LM5LM');
 INSERT INTO Turma (DisciplinaId, Numero, TurmaHorario) VALUES((SELECT Id FROM Disciplina WHERE Nome='Programacao para Software Basico'), 128, '2JK4JK');
 INSERT INTO Turma (DisciplinaId, Numero, TurmaHorario) VALUES((SELECT Id FROM Disciplina WHERE Nome='Programacao para Software Basico'), 138, '2NP4NP');
@@ -249,13 +250,13 @@ INSERT INTO Turma (DisciplinaId, Numero, TurmaHorario) VALUES((SELECT Id FROM Di
 INSERT INTO Turma (DisciplinaId, Numero, TurmaHorario) VALUES((SELECT Id FROM Disciplina WHERE Nome='Compiladores'), 128, '3LM5LM');
 INSERT INTO Turma (DisciplinaId, Numero, TurmaHorario) VALUES((SELECT Id FROM Disciplina WHERE Nome='Complexidade e Otimizacao'), 128, '2NP4NP');
 INSERT INTO Turma (DisciplinaId, Numero, TurmaHorario) VALUES((SELECT Id FROM Disciplina WHERE Nome='Computacao Grafica I'), 128, '2JK4JK');
-INSERT INTO Turma (DisciplinaId, Numero, TurmaHorario) VALUES((SELECT Id FROM Disciplina WHERE Nome='Modelagem Conceitual e Projeto de Banco de Dados'), 128, '2LM4LM');
-INSERT INTO Turma (DisciplinaId, Numero, TurmaHorario) VALUES((SELECT Id FROM Disciplina WHERE Nome='Organizacao e Arquitetura de Computadores III'), 128, '3JK5JK');
+INSERT INTO Turma (DisciplinaId, Numero, TurmaHorario) VALUES((SELECT Id FROM Disciplina WHERE Nome='Modelagem Conceit. e Proj. de Banco Dados'), 128, '2LM4LM');
+INSERT INTO Turma (DisciplinaId, Numero, TurmaHorario) VALUES((SELECT Id FROM Disciplina WHERE Nome='Organizacao e Arquit. de Computadores III'), 128, '3JK5JK');
 INSERT INTO Turma (DisciplinaId, Numero, TurmaHorario) VALUES((SELECT Id FROM Disciplina WHERE Nome='TEcnicas de Programacao'), 128, '3NP5NP');
 INSERT INTO Turma (DisciplinaId, Numero, TurmaHorario) VALUES((SELECT Id FROM Disciplina WHERE Nome='TEcnicas de Programacao'), 138, '3JK5JK');
 
 INSERT INTO Turma (DisciplinaId, Numero, TurmaHorario) VALUES((SELECT Id FROM Disciplina WHERE Nome='Computacao Grafica II'), 128, '3JK');
-INSERT INTO Turma (DisciplinaId, Numero, TurmaHorario) VALUES((SELECT Id FROM Disciplina WHERE Nome='Gerencia de Projeto de Software'), 128, '3LM5LM');
+INSERT INTO Turma (DisciplinaId, Numero, TurmaHorario) VALUES((SELECT Id FROM Disciplina WHERE Nome='Gerencia de Projetos de Software'), 128, '3LM5LM');
 INSERT INTO Turma (DisciplinaId, Numero, TurmaHorario) VALUES((SELECT Id FROM Disciplina WHERE Nome='MEtodos Estatisticos'), 128, '3NP5NP');
 INSERT INTO Turma (DisciplinaId, Numero, TurmaHorario) VALUES((SELECT Id FROM Disciplina WHERE Nome='MEtodos Formais para Computacao'), 128, '2LM4LM');
 INSERT INTO Turma (DisciplinaId, Numero, TurmaHorario) VALUES((SELECT Id FROM Disciplina WHERE Nome='Projeto de Interfaces'), 128, '5JK');
