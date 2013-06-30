@@ -43,6 +43,7 @@ namespace AcadOracle.WebMVC.Controllers
         //
         // GET: /Turma/Create
 
+        [Authorize]
         public ActionResult Create()
         {
 			ViewBag.PossibleDisciplinas = disciplinaRepository.All;
@@ -52,6 +53,7 @@ namespace AcadOracle.WebMVC.Controllers
         //
         // POST: /Turma/Create
 
+        [Authorize]
         [HttpPost]
         public ActionResult Create(TurmaEditModel turma)
         {
@@ -71,7 +73,8 @@ namespace AcadOracle.WebMVC.Controllers
         
         //
         // GET: /Turma/Edit/5
- 
+
+        [Authorize]
         public ActionResult Edit(int id)
         {
 			ViewBag.PossibleDisciplinas = disciplinaRepository.All;
@@ -84,6 +87,7 @@ namespace AcadOracle.WebMVC.Controllers
         //
         // POST: /Turma/Edit/5
 
+        [Authorize]
         [HttpPost]
         public ActionResult Edit(TurmaEditModel turma)
         {
@@ -111,6 +115,7 @@ namespace AcadOracle.WebMVC.Controllers
         //
         // POST: /Turma/Delete/5
 
+        [Authorize]
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {

@@ -42,6 +42,7 @@ namespace AcadOracle.WebMVC.Controllers
         //
         // GET: /Cursoes/Create
 
+        [Authorize]
         public ActionResult Create()
         {
             return View();
@@ -64,7 +65,8 @@ namespace AcadOracle.WebMVC.Controllers
         
         //
         // GET: /Cursoes/Edit/5
- 
+
+        [Authorize]
         public ActionResult Edit(int id)
         {
              return View(cursoRepository.Find(id));
@@ -73,6 +75,7 @@ namespace AcadOracle.WebMVC.Controllers
         //
         // POST: /Cursoes/Edit/5
 
+        [Authorize]
         [HttpPost]
         public ActionResult Edit(Curso curso)
         {
@@ -87,7 +90,8 @@ namespace AcadOracle.WebMVC.Controllers
 
         //
         // GET: /Cursoes/Delete/5
- 
+
+        [Authorize]
         public ActionResult Delete(int id)
         {
             return View(cursoRepository.Find(id));
@@ -96,6 +100,7 @@ namespace AcadOracle.WebMVC.Controllers
         //
         // POST: /Cursoes/Delete/5
 
+        [Authorize]
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {

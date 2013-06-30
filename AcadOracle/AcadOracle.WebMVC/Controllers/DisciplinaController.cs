@@ -26,6 +26,7 @@ namespace AcadOracle.WebMVC.Controllers
         //
         // GET: /Disciplina/
 
+
         public ViewResult Index()
         {
             return View(disciplinaRepository.AllIncluding(disciplina => disciplina.Turmas, disciplina => disciplina.Cursoes, disciplina => disciplina.PreRequisitos, disciplina => disciplina.RequisitoPara));
@@ -91,6 +92,7 @@ namespace AcadOracle.WebMVC.Controllers
             }
         }
 
+        [Authorize]
         public ActionResult Create(int? cursoId)
         {
             DisciplinaCreationModel model = new DisciplinaCreationModel();
@@ -110,6 +112,7 @@ namespace AcadOracle.WebMVC.Controllers
         //
         // POST: /Disciplina/Create
 
+        [Authorize]
         [HttpPost]
         public ActionResult Create(DisciplinaCreationModel disciplinaModel)
         {
@@ -125,7 +128,8 @@ namespace AcadOracle.WebMVC.Controllers
 
         //
         // GET: /Disciplina/Edit/5
- 
+
+        [Authorize]
         public ActionResult Edit(int id)
         {
             Disciplina disciplina = disciplinaRepository.Find(id);
@@ -151,6 +155,7 @@ namespace AcadOracle.WebMVC.Controllers
         //
         // POST: /Disciplina/Edit/5
 
+        [Authorize]
         [HttpPost]
         public ActionResult Edit(DisciplinaCreationModel disciplinaModel)
         {
@@ -163,7 +168,8 @@ namespace AcadOracle.WebMVC.Controllers
 
         //
         // GET: /Disciplina/Delete/5
- 
+
+        [Authorize]
         public ActionResult Delete(int id)
         {
             return View(disciplinaRepository.Find(id));

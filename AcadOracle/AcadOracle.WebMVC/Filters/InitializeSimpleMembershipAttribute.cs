@@ -38,7 +38,7 @@ namespace AcadOracle.WebMVC.Filters
                         }
                     }
 
-                    WebSecurity.InitializeDatabaseConnection("AcadOracleDB", "UserProfile", "UserId", "UserName", autoCreateTables: true);
+                    WebSecurity.InitializeDatabaseConnection("AcadOracleDBContext", "UserProfile", "UserId", "UserName", autoCreateTables: true);
                 }
                 catch (Exception ex)
                 {

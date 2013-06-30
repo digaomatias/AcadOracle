@@ -41,7 +41,7 @@ namespace AcadOracle.WebMVC.Controllers
             }
 
             // If we got this far, something failed, redisplay form
-            ModelState.AddModelError("", "The user name or password provided is incorrect.");
+            ModelState.AddModelError("", "Usuário ou senha incorretos.");
             return View(model);
         }
 
@@ -128,9 +128,9 @@ namespace AcadOracle.WebMVC.Controllers
         public ActionResult Manage(ManageMessageId? message)
         {
             ViewBag.StatusMessage =
-                message == ManageMessageId.ChangePasswordSuccess ? "Your password has been changed."
-                : message == ManageMessageId.SetPasswordSuccess ? "Your password has been set."
-                : message == ManageMessageId.RemoveLoginSuccess ? "The external login was removed."
+                message == ManageMessageId.ChangePasswordSuccess ? "Sua senha foi alterada."
+                : message == ManageMessageId.SetPasswordSuccess ? "Sua senha foi definida."
+                : message == ManageMessageId.RemoveLoginSuccess ? "O Login externo foi removido."
                 : "";
             ViewBag.HasLocalPassword = OAuthWebSecurity.HasLocalAccount(WebSecurity.GetUserId(User.Identity.Name));
             ViewBag.ReturnUrl = Url.Action("Manage");
@@ -168,7 +168,7 @@ namespace AcadOracle.WebMVC.Controllers
                     }
                     else
                     {
-                        ModelState.AddModelError("", "The current password is incorrect or the new password is invalid.");
+                        ModelState.AddModelError("", "A senha atual está incorreta ou a nova senha é inválida.");
                     }
                 }
             }
@@ -280,7 +280,7 @@ namespace AcadOracle.WebMVC.Controllers
                     }
                     else
                     {
-                        ModelState.AddModelError("UserName", "User name already exists. Please enter a different user name.");
+                        ModelState.AddModelError("UserName", "Usuário já existe. Por favor, entre um nome de usuário diferente.");
                     }
                 }
             }
