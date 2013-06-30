@@ -26,15 +26,60 @@
 
     <div class="display-label">Turmas</div>
     <div class="display-field">@(Model.Turmas == null ? "None" : Model.Turmas.Count.ToString())</div>
-
-    <div class="display-label">Cursoes</div>
+    @if (Model.Turmas != null && Model.Turmas.Count > 0)
+    {
+        <div class="display-field-it">
+            @foreach (var turma in Model.Turmas)
+            {
+                @turma.ToString()
+                ;
+                <br />
+            }
+        </div>
+    }
+    <div class="display-label">Curso</div>
     <div class="display-field">@(Model.Cursoes == null ? "None" : Model.Cursoes.Count.ToString())</div>
+        @if (Model.Cursoes != null && Model.Cursoes.Count > 0)
+        {
+            <div class="display-field-it">
+                @foreach (var curso in Model.Cursoes)
+                {
+                    @curso.ToString()
+                    ;
+                    <br />
+                }
+            </div>
+        }
+    
 
     <div class="display-label">PreRequisitos</div>
     <div class="display-field">@(Model.PreRequisitos == null ? "None" : Model.PreRequisitos.Count.ToString())</div>
+    @if (Model.PreRequisitos != null && Model.PreRequisitos.Count > 0)
+    {
+        <div class="display-field-it">
+            @foreach (var prereq in Model.PreRequisitos)
+            {
+                @prereq.Nome
 
+                <br />
+            }
+        </div>
+    }
     <div class="display-label">RequisitoPara</div>
     <div class="display-field">@(Model.RequisitoPara == null ? "None" : Model.RequisitoPara.Count.ToString())</div>
+
+        @if (Model.RequisitoPara != null && Model.RequisitoPara.Count > 0)
+        {
+            <div class="display-field-it">            
+                @foreach (var req in Model.RequisitoPara)
+                {
+                    @req.Nome
+
+                    <br />
+                }
+            </div>
+        }
+    
 
     <div class="display-label">Peso</div>
     <div class="display-field">@Model.Peso</div>

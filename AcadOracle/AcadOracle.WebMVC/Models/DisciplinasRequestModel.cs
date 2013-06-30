@@ -16,4 +16,16 @@ namespace AcadOracle.WebMVC.Models
         public int[] CursadasId { get; set; }
         public IEnumerable<KeyValuePair<string, int>> Disciplinas { get; set; }
     }
+
+    public class PreRequisitosRequestModel
+    {
+        public int CursoId { get; set; }
+        public int DisciplinaId { get; set; }
+    }
+
+    public class PreRequisitosResponseView
+    {
+        public int[] PreRequisitosId { get; set; }
+        public IEnumerable<KeyValuePair<string, int>> Disciplinas { get; set; }
+    }
 }

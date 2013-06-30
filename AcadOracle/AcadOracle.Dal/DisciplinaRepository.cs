@@ -27,6 +27,11 @@ namespace AcadOracle.Dal
             return query;
         }
 
+        public void SetContext(AcadOracleDBContext context)
+        {
+            this.context = context;
+        }
+
         public Disciplina Find(int id)
         {
             return context.Disciplinas.Find(id);

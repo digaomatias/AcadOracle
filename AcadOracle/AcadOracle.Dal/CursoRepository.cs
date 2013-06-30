@@ -28,6 +28,11 @@ namespace AcadOracle.Dal
             return query;
         }
 
+        public void SetContext(AcadOracleDBContext context)
+        {
+            this.context = context;
+        }
+
         public Curso Find(int id)
         {
             return context.Cursos.Find(id);

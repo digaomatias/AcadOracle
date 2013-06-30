@@ -27,6 +27,11 @@ namespace AcadOracle.Dal
             return query;
         }
 
+        public void SetContext(AcadOracleDBContext context)
+        {
+            this.context = context;
+        }
+
         public Turma Find(int id)
         {
             return context.Turmas.Find(id);

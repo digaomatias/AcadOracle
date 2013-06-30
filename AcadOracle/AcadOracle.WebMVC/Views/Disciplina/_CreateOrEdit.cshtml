@@ -1,12 +1,20 @@
-@model AcadOracle.DomainModel.Models.Disciplina
+@model AcadOracle.WebMVC.Models.DisciplinaCreationModel
 
 @* This partial view defines form fields that will appear when creating and editing entities *@
 
+@Html.HiddenFor(model => model.Id)
 <div class="editor-label">
-    @Html.LabelFor(model => model.Cursoes)
+    @Html.LabelFor(model => model.CursoId)
 </div>
 <div class="editor-field">
-    @Html.DropDownListFor(model => model.Cursoes, (SelectList)ViewBag.CursoList )
+    @Html.DropDownListFor(model => model.CursoId, new SelectList(Model.CursosList, "Key", "Value", Model.CursoId), " -- Selecione um curso --", null )
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.PreRequisitos)
+</div>
+<div class="editor-field">
+    @Html.ListBoxFor(model => model.PreRequisitosId, new MultiSelectList(Model.DisciplinasList, "Key", "Value", Model.PreRequisitosId), new { title="Marque as disciplinas que você não deseja cursar.", style="width: 310px;" })
 </div>
 
 <div class="editor-label">
@@ -48,4 +56,3 @@
     @Html.EditorFor(model => model.Eletiva)
     @Html.ValidationMessageFor(model => model.Eletiva)
 </div>
-

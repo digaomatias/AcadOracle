@@ -152,6 +152,21 @@ footer {
     text-decoration: none;
 }
 
+/*Display style
+----------------------------------------------------------*/
+div .display-label {
+    font-size: 15px;
+    font-style: oblique;
+    font-variant: small-caps;
+    font-weight: bold;
+    margin-top: 0.5em;
+}
+div .display-field-it {
+    margin-left: 1em;
+    width: 300px;
+    border: solid;
+    border-width: 1px;
+}
 
 /* login
 ----------------------------------------------------------*/
@@ -760,7 +775,8 @@ tr.pager td {
         padding: 10px 0;
     }
 
-        footer p {
-            margin: 0;
-        }
+    footer p {
+        margin: 0;
+    }
+
 }
