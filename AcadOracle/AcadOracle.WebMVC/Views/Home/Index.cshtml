@@ -19,17 +19,15 @@
 <h3>Então, vamos começar:</h3>
 <ol class="round">
     <li class="one">
-        <h5>Cursos, Disciplinas e Turmas</h5>
-        Primeiro é preciso que você informe adicione em nossa base as informações de curso,
-        disciplina e turmas das disciplinas. Com isso será possível utilizar o sistema para
-        a sugestão eficaz de sua grade.
+        <h5>Para o Professor</h5>
+        Professor tem acesso ao conteúdo de gerência de curso, disciplinas e turmas. É necessário logar-se no sistema para acessar essa área.
         - @Html.ActionLink("Cursos", "Index", "Cursoes")
         - @Html.ActionLink("Disciplinas", "Index", "Disciplina")
         - @Html.ActionLink("Turmas", "Index", "Turma")
     </li>
 
     <li class="two">
-        <h5>Obter grade curricular</h5>
-        Agora é simples, basta @Html.ActionLink("entrar aqui", "Create", "OracleService") para obter sua sugestão de grade curricular. 
+        <h5>Para o Aluno</h5>
+        Basta @Html.ActionLink("entrar aqui", "Create", "OracleService") para obter sua sugestão de grade curricular. 
     </li>
 </ol>

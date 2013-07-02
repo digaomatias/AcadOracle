@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <setParameter name="IIS Web Application Name" value="Default Web Site/AcadOracleWeb" />
+  <setParameter name="DefaultConnection-Web.config Connection String" value="Data Source=(LocalDb)\v11.0;Initial Catalog=aspnet-AcadOracle.WebMVC-20130509191902;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|\aspnet-AcadOracle.WebMVC-20130509191902.mdf" />
+  <setParameter name="AcadOracleDBContext-Web.config Connection String" value="Data Source=localhost;Initial Catalog=AcadOracleDB;Integrated Security=SSPI;MultipleActiveResultSets=true" />
+  <setParameter name="AcadOracle.Dal.EntityModels.AcadOracleDBEntities-Web.config Connection String" value="AcadOracle.Dal.EntityModels.AcadOracleDBEntities_ConnectionString" />
+</parameters>

@@ -26,6 +26,7 @@ namespace AcadOracle.WebMVC.Controllers
         //
         // GET: /Cursoes/
 
+        [Authorize]
         public ViewResult Index()
         {
             return View(cursoRepository.AllIncluding(curso => curso.Disciplinas));
@@ -34,6 +35,7 @@ namespace AcadOracle.WebMVC.Controllers
         //
         // GET: /Cursoes/Details/5
 
+        [Authorize]
         public ViewResult Details(int id)
         {
             return View(cursoRepository.Find(id));

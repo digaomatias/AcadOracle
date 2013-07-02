@@ -26,7 +26,7 @@ namespace AcadOracle.WebMVC.Controllers
 
         //
         // GET: /Turma/
-
+        [Authorize]
         public ViewResult Index()
         {
             return View(turmaRepository.AllIncluding(turma => turma.Disciplina));
@@ -34,7 +34,7 @@ namespace AcadOracle.WebMVC.Controllers
 
         //
         // GET: /Turma/Details/5
-
+        [Authorize]
         public ViewResult Details(int id)
         {
             return View(turmaRepository.Find(id));

@@ -88,7 +88,7 @@
         <interfaceShapeMoniker Id="5713e15c-07e4-425e-9d0c-4d4d929f2609" />
       </nodes>
     </generalizationConnector>
-    <generalizationConnector edgePoints="[(7.85604431137663 : 3.75); (7.85604431137663 : 3.17628466427326); (7.6875 : 3.17628466427326); (7.6875 : 2.80128466427326)]" fixedFrom="Caller" fixedTo="NotFixed" customColor="113, 111, 110">
+    <generalizationConnector edgePoints="[(7.85604431137663 : 3.75); (7.85604431137663 : 3.17628466427326); (7.6875 : 3.17628466427326); (7.6875 : 2.80128466427326)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110">
       <generalizationMoniker Id="c5367ceb-6273-4717-87f5-168d803c938b" />
       <relativeChildShapes />
       <nodes>
