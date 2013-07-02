@@ -2,12 +2,12 @@
     $('#btnReload').click(function () {
 
         var req = getDisciplinasRequestModel();
-        
+        var json = JSON.stringify(req);
         $.ajax({
             type: 'POST',
             url: '/OracleService/GetDisciplinasPendentes',
             dataType: 'json',
-            data: req,
+            data: json,
             contentType: 'application/json; charset=utf-8',
             success: populateCursadas
         });
